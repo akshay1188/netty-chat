@@ -1,0 +1,25 @@
+
+option optimize_for = SPEED;
+option java_package = "poke.core";
+
+message Header {
+         optional string md5 = 1;
+         required int32 client_id = 2;
+         required int32 cluster_id = 3;
+         required bool is_client = 4;
+         required string caption = 5;	// image caption / title
+}
+
+message PayLoad {
+         required bytes data = 1; // Image format should be PNG
+}
+
+message Ping{
+		required bool is_ping = 1;
+}
+
+message Request {
+         required Header header = 1;
+         required PayLoad payload = 2;
+         required Ping ping = 3;
+}
