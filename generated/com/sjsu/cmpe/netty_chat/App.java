@@ -158,10 +158,10 @@ public final class App {
     // @@protoc_insertion_point(enum_scope:PokeStatus)
   }
 
-  public interface NameValueSetOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
+  public interface NameValueSetOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:NameValueSet)
+      com.google.protobuf.MessageOrBuilder {
 
-    // required .NameValueSet.NodeType node_type = 1;
     /**
      * <code>required .NameValueSet.NodeType node_type = 1;</code>
      *
@@ -179,7 +179,6 @@ public final class App {
      */
     com.sjsu.cmpe.netty_chat.App.NameValueSet.NodeType getNodeType();
 
-    // optional string name = 2;
     /**
      * <code>optional string name = 2;</code>
      */
@@ -194,7 +193,6 @@ public final class App {
     com.google.protobuf.ByteString
         getNameBytes();
 
-    // optional string value = 3;
     /**
      * <code>optional string value = 3;</code>
      */
@@ -209,7 +207,6 @@ public final class App {
     com.google.protobuf.ByteString
         getValueBytes();
 
-    // repeated .NameValueSet node = 4;
     /**
      * <code>repeated .NameValueSet node = 4;</code>
      *
@@ -262,8 +259,9 @@ public final class App {
    * </pre>
    */
   public static final class NameValueSet extends
-      com.google.protobuf.GeneratedMessage
-      implements NameValueSetOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:NameValueSet)
+      NameValueSetOrBuilder {
     // Use NameValueSet.newBuilder() to construct.
     private NameValueSet(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
@@ -321,13 +319,15 @@ public final class App {
               break;
             }
             case 18: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000002;
-              name_ = input.readBytes();
+              name_ = bs;
               break;
             }
             case 26: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000004;
-              value_ = input.readBytes();
+              value_ = bs;
               break;
             }
             case 34: {
@@ -463,7 +463,6 @@ public final class App {
     }
 
     private int bitField0_;
-    // required .NameValueSet.NodeType node_type = 1;
     public static final int NODE_TYPE_FIELD_NUMBER = 1;
     private com.sjsu.cmpe.netty_chat.App.NameValueSet.NodeType nodeType_;
     /**
@@ -487,7 +486,6 @@ public final class App {
       return nodeType_;
     }
 
-    // optional string name = 2;
     public static final int NAME_FIELD_NUMBER = 2;
     private java.lang.Object name_;
     /**
@@ -530,7 +528,6 @@ public final class App {
       }
     }
 
-    // optional string value = 3;
     public static final int VALUE_FIELD_NUMBER = 3;
     private java.lang.Object value_;
     /**
@@ -573,7 +570,6 @@ public final class App {
       }
     }
 
-    // repeated .NameValueSet node = 4;
     public static final int NODE_FIELD_NUMBER = 4;
     private java.util.List<com.sjsu.cmpe.netty_chat.App.NameValueSet> node_;
     /**
@@ -638,7 +634,8 @@ public final class App {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
 
       if (!hasNodeType()) {
         memoizedIsInitialized = 0;
@@ -780,8 +777,9 @@ public final class App {
      * </pre>
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements com.sjsu.cmpe.netty_chat.App.NameValueSetOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:NameValueSet)
+        com.sjsu.cmpe.netty_chat.App.NameValueSetOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return com.sjsu.cmpe.netty_chat.App.internal_static_NameValueSet_descriptor;
@@ -968,7 +966,6 @@ public final class App {
       }
       private int bitField0_;
 
-      // required .NameValueSet.NodeType node_type = 1;
       private com.sjsu.cmpe.netty_chat.App.NameValueSet.NodeType nodeType_ = com.sjsu.cmpe.netty_chat.App.NameValueSet.NodeType.NODE;
       /**
        * <code>required .NameValueSet.NodeType node_type = 1;</code>
@@ -1020,7 +1017,6 @@ public final class App {
         return this;
       }
 
-      // optional string name = 2;
       private java.lang.Object name_ = "";
       /**
        * <code>optional string name = 2;</code>
@@ -1034,9 +1030,12 @@ public final class App {
       public java.lang.String getName() {
         java.lang.Object ref = name_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          name_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            name_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -1094,7 +1093,6 @@ public final class App {
         return this;
       }
 
-      // optional string value = 3;
       private java.lang.Object value_ = "";
       /**
        * <code>optional string value = 3;</code>
@@ -1108,9 +1106,12 @@ public final class App {
       public java.lang.String getValue() {
         java.lang.Object ref = value_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          value_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            value_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -1168,7 +1169,6 @@ public final class App {
         return this;
       }
 
-      // repeated .NameValueSet node = 4;
       private java.util.List<com.sjsu.cmpe.netty_chat.App.NameValueSet> node_ =
         java.util.Collections.emptyList();
       private void ensureNodeIsMutable() {
@@ -1350,7 +1350,8 @@ public final class App {
           java.lang.Iterable<? extends com.sjsu.cmpe.netty_chat.App.NameValueSet> values) {
         if (nodeBuilder_ == null) {
           ensureNodeIsMutable();
-          super.addAll(values, node_);
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, node_);
           onChanged();
         } else {
           nodeBuilder_.addAllMessages(values);
@@ -1491,10 +1492,10 @@ public final class App {
     // @@protoc_insertion_point(class_scope:NameValueSet)
   }
 
-  public interface NameSpaceOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
+  public interface NameSpaceOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:NameSpace)
+      com.google.protobuf.MessageOrBuilder {
 
-    // required int64 ns_id = 2 [default = -1];
     /**
      * <code>required int64 ns_id = 2 [default = -1];</code>
      *
@@ -1512,7 +1513,6 @@ public final class App {
      */
     long getNsId();
 
-    // optional string name = 3;
     /**
      * <code>optional string name = 3;</code>
      */
@@ -1527,7 +1527,6 @@ public final class App {
     com.google.protobuf.ByteString
         getNameBytes();
 
-    // optional string desc = 4;
     /**
      * <code>optional string desc = 4;</code>
      */
@@ -1542,7 +1541,6 @@ public final class App {
     com.google.protobuf.ByteString
         getDescBytes();
 
-    // optional int64 created = 5;
     /**
      * <code>optional int64 created = 5;</code>
      */
@@ -1552,7 +1550,6 @@ public final class App {
      */
     long getCreated();
 
-    // optional int64 last_modified = 6;
     /**
      * <code>optional int64 last_modified = 6;</code>
      */
@@ -1562,7 +1559,6 @@ public final class App {
      */
     long getLastModified();
 
-    // optional string owner = 7;
     /**
      * <code>optional string owner = 7;</code>
      */
@@ -1577,7 +1573,6 @@ public final class App {
     com.google.protobuf.ByteString
         getOwnerBytes();
 
-    // optional .NameValueSet properties = 8;
     /**
      * <code>optional .NameValueSet properties = 8;</code>
      *
@@ -1611,8 +1606,9 @@ public final class App {
    * </pre>
    */
   public static final class NameSpace extends
-      com.google.protobuf.GeneratedMessage
-      implements NameSpaceOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:NameSpace)
+      NameSpaceOrBuilder {
     // Use NameSpace.newBuilder() to construct.
     private NameSpace(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
@@ -1664,13 +1660,15 @@ public final class App {
               break;
             }
             case 26: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000002;
-              name_ = input.readBytes();
+              name_ = bs;
               break;
             }
             case 34: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000004;
-              desc_ = input.readBytes();
+              desc_ = bs;
               break;
             }
             case 40: {
@@ -1684,8 +1682,9 @@ public final class App {
               break;
             }
             case 58: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000020;
-              owner_ = input.readBytes();
+              owner_ = bs;
               break;
             }
             case 66: {
@@ -1741,7 +1740,6 @@ public final class App {
     }
 
     private int bitField0_;
-    // required int64 ns_id = 2 [default = -1];
     public static final int NS_ID_FIELD_NUMBER = 2;
     private long nsId_;
     /**
@@ -1765,7 +1763,6 @@ public final class App {
       return nsId_;
     }
 
-    // optional string name = 3;
     public static final int NAME_FIELD_NUMBER = 3;
     private java.lang.Object name_;
     /**
@@ -1808,7 +1805,6 @@ public final class App {
       }
     }
 
-    // optional string desc = 4;
     public static final int DESC_FIELD_NUMBER = 4;
     private java.lang.Object desc_;
     /**
@@ -1851,7 +1847,6 @@ public final class App {
       }
     }
 
-    // optional int64 created = 5;
     public static final int CREATED_FIELD_NUMBER = 5;
     private long created_;
     /**
@@ -1867,7 +1862,6 @@ public final class App {
       return created_;
     }
 
-    // optional int64 last_modified = 6;
     public static final int LAST_MODIFIED_FIELD_NUMBER = 6;
     private long lastModified_;
     /**
@@ -1883,7 +1877,6 @@ public final class App {
       return lastModified_;
     }
 
-    // optional string owner = 7;
     public static final int OWNER_FIELD_NUMBER = 7;
     private java.lang.Object owner_;
     /**
@@ -1926,7 +1919,6 @@ public final class App {
       }
     }
 
-    // optional .NameValueSet properties = 8;
     public static final int PROPERTIES_FIELD_NUMBER = 8;
     private com.sjsu.cmpe.netty_chat.App.NameValueSet properties_;
     /**
@@ -1972,7 +1964,8 @@ public final class App {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
 
       if (!hasNsId()) {
         memoizedIsInitialized = 0;
@@ -2135,8 +2128,9 @@ public final class App {
      * </pre>
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements com.sjsu.cmpe.netty_chat.App.NameSpaceOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:NameSpace)
+        com.sjsu.cmpe.netty_chat.App.NameSpaceOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return com.sjsu.cmpe.netty_chat.App.internal_static_NameSpace_descriptor;
@@ -2328,7 +2322,6 @@ public final class App {
       }
       private int bitField0_;
 
-      // required int64 ns_id = 2 [default = -1];
       private long nsId_ = -1L;
       /**
        * <code>required int64 ns_id = 2 [default = -1];</code>
@@ -2377,7 +2370,6 @@ public final class App {
         return this;
       }
 
-      // optional string name = 3;
       private java.lang.Object name_ = "";
       /**
        * <code>optional string name = 3;</code>
@@ -2391,9 +2383,12 @@ public final class App {
       public java.lang.String getName() {
         java.lang.Object ref = name_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          name_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            name_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -2451,7 +2446,6 @@ public final class App {
         return this;
       }
 
-      // optional string desc = 4;
       private java.lang.Object desc_ = "";
       /**
        * <code>optional string desc = 4;</code>
@@ -2465,9 +2459,12 @@ public final class App {
       public java.lang.String getDesc() {
         java.lang.Object ref = desc_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          desc_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            desc_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -2525,7 +2522,6 @@ public final class App {
         return this;
       }
 
-      // optional int64 created = 5;
       private long created_ ;
       /**
        * <code>optional int64 created = 5;</code>
@@ -2558,7 +2554,6 @@ public final class App {
         return this;
       }
 
-      // optional int64 last_modified = 6;
       private long lastModified_ ;
       /**
        * <code>optional int64 last_modified = 6;</code>
@@ -2591,7 +2586,6 @@ public final class App {
         return this;
       }
 
-      // optional string owner = 7;
       private java.lang.Object owner_ = "";
       /**
        * <code>optional string owner = 7;</code>
@@ -2605,9 +2599,12 @@ public final class App {
       public java.lang.String getOwner() {
         java.lang.Object ref = owner_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          owner_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            owner_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -2665,7 +2662,6 @@ public final class App {
         return this;
       }
 
-      // optional .NameValueSet properties = 8;
       private com.sjsu.cmpe.netty_chat.App.NameValueSet properties_ = com.sjsu.cmpe.netty_chat.App.NameValueSet.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           com.sjsu.cmpe.netty_chat.App.NameValueSet, com.sjsu.cmpe.netty_chat.App.NameValueSet.Builder, com.sjsu.cmpe.netty_chat.App.NameValueSetOrBuilder> propertiesBuilder_;
@@ -2810,7 +2806,7 @@ public final class App {
         if (propertiesBuilder_ == null) {
           propertiesBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               com.sjsu.cmpe.netty_chat.App.NameValueSet, com.sjsu.cmpe.netty_chat.App.NameValueSet.Builder, com.sjsu.cmpe.netty_chat.App.NameValueSetOrBuilder>(
-                  properties_,
+                  getProperties(),
                   getParentForChildren(),
                   isClean());
           properties_ = null;
@@ -2829,10 +2825,10 @@ public final class App {
     // @@protoc_insertion_point(class_scope:NameSpace)
   }
 
-  public interface JobDescOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
+  public interface JobDescOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:JobDesc)
+      com.google.protobuf.MessageOrBuilder {
 
-    // required string name_space = 1;
     /**
      * <code>required string name_space = 1;</code>
      */
@@ -2847,7 +2843,6 @@ public final class App {
     com.google.protobuf.ByteString
         getNameSpaceBytes();
 
-    // required int64 owner_id = 2;
     /**
      * <code>required int64 owner_id = 2;</code>
      */
@@ -2857,7 +2852,6 @@ public final class App {
      */
     long getOwnerId();
 
-    // required string job_id = 3;
     /**
      * <code>required string job_id = 3;</code>
      */
@@ -2872,7 +2866,6 @@ public final class App {
     com.google.protobuf.ByteString
         getJobIdBytes();
 
-    // required .JobDesc.JobCode status = 4;
     /**
      * <code>required .JobDesc.JobCode status = 4;</code>
      */
@@ -2882,7 +2875,6 @@ public final class App {
      */
     com.sjsu.cmpe.netty_chat.App.JobDesc.JobCode getStatus();
 
-    // optional .NameValueSet options = 5;
     /**
      * <code>optional .NameValueSet options = 5;</code>
      */
@@ -2904,8 +2896,9 @@ public final class App {
    * </pre>
    */
   public static final class JobDesc extends
-      com.google.protobuf.GeneratedMessage
-      implements JobDescOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:JobDesc)
+      JobDescOrBuilder {
     // Use JobDesc.newBuilder() to construct.
     private JobDesc(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
@@ -2952,8 +2945,9 @@ public final class App {
               break;
             }
             case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000001;
-              nameSpace_ = input.readBytes();
+              nameSpace_ = bs;
               break;
             }
             case 16: {
@@ -2962,8 +2956,9 @@ public final class App {
               break;
             }
             case 26: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000004;
-              jobId_ = input.readBytes();
+              jobId_ = bs;
               break;
             }
             case 32: {
@@ -3148,7 +3143,6 @@ public final class App {
     }
 
     private int bitField0_;
-    // required string name_space = 1;
     public static final int NAME_SPACE_FIELD_NUMBER = 1;
     private java.lang.Object nameSpace_;
     /**
@@ -3191,7 +3185,6 @@ public final class App {
       }
     }
 
-    // required int64 owner_id = 2;
     public static final int OWNER_ID_FIELD_NUMBER = 2;
     private long ownerId_;
     /**
@@ -3207,7 +3200,6 @@ public final class App {
       return ownerId_;
     }
 
-    // required string job_id = 3;
     public static final int JOB_ID_FIELD_NUMBER = 3;
     private java.lang.Object jobId_;
     /**
@@ -3250,7 +3242,6 @@ public final class App {
       }
     }
 
-    // required .JobDesc.JobCode status = 4;
     public static final int STATUS_FIELD_NUMBER = 4;
     private com.sjsu.cmpe.netty_chat.App.JobDesc.JobCode status_;
     /**
@@ -3266,7 +3257,6 @@ public final class App {
       return status_;
     }
 
-    // optional .NameValueSet options = 5;
     public static final int OPTIONS_FIELD_NUMBER = 5;
     private com.sjsu.cmpe.netty_chat.App.NameValueSet options_;
     /**
@@ -3298,7 +3288,8 @@ public final class App {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
 
       if (!hasNameSpace()) {
         memoizedIsInitialized = 0;
@@ -3459,8 +3450,9 @@ public final class App {
      * </pre>
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements com.sjsu.cmpe.netty_chat.App.JobDescOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:JobDesc)
+        com.sjsu.cmpe.netty_chat.App.JobDescOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return com.sjsu.cmpe.netty_chat.App.internal_static_JobDesc_descriptor;
@@ -3644,7 +3636,6 @@ public final class App {
       }
       private int bitField0_;
 
-      // required string name_space = 1;
       private java.lang.Object nameSpace_ = "";
       /**
        * <code>required string name_space = 1;</code>
@@ -3658,9 +3649,12 @@ public final class App {
       public java.lang.String getNameSpace() {
         java.lang.Object ref = nameSpace_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          nameSpace_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            nameSpace_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -3718,7 +3712,6 @@ public final class App {
         return this;
       }
 
-      // required int64 owner_id = 2;
       private long ownerId_ ;
       /**
        * <code>required int64 owner_id = 2;</code>
@@ -3751,7 +3744,6 @@ public final class App {
         return this;
       }
 
-      // required string job_id = 3;
       private java.lang.Object jobId_ = "";
       /**
        * <code>required string job_id = 3;</code>
@@ -3765,9 +3757,12 @@ public final class App {
       public java.lang.String getJobId() {
         java.lang.Object ref = jobId_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          jobId_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            jobId_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -3825,7 +3820,6 @@ public final class App {
         return this;
       }
 
-      // required .JobDesc.JobCode status = 4;
       private com.sjsu.cmpe.netty_chat.App.JobDesc.JobCode status_ = com.sjsu.cmpe.netty_chat.App.JobDesc.JobCode.JOBUNKNOWN;
       /**
        * <code>required .JobDesc.JobCode status = 4;</code>
@@ -3861,7 +3855,6 @@ public final class App {
         return this;
       }
 
-      // optional .NameValueSet options = 5;
       private com.sjsu.cmpe.netty_chat.App.NameValueSet options_ = com.sjsu.cmpe.netty_chat.App.NameValueSet.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           com.sjsu.cmpe.netty_chat.App.NameValueSet, com.sjsu.cmpe.netty_chat.App.NameValueSet.Builder, com.sjsu.cmpe.netty_chat.App.NameValueSetOrBuilder> optionsBuilder_;
@@ -3970,7 +3963,7 @@ public final class App {
         if (optionsBuilder_ == null) {
           optionsBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               com.sjsu.cmpe.netty_chat.App.NameValueSet, com.sjsu.cmpe.netty_chat.App.NameValueSet.Builder, com.sjsu.cmpe.netty_chat.App.NameValueSetOrBuilder>(
-                  options_,
+                  getOptions(),
                   getParentForChildren(),
                   isClean());
           options_ = null;
@@ -3989,10 +3982,10 @@ public final class App {
     // @@protoc_insertion_point(class_scope:JobDesc)
   }
 
-  public interface PingOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
+  public interface PingOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Ping)
+      com.google.protobuf.MessageOrBuilder {
 
-    // required int32 number = 1;
     /**
      * <code>required int32 number = 1;</code>
      */
@@ -4002,7 +3995,6 @@ public final class App {
      */
     int getNumber();
 
-    // required string tag = 2;
     /**
      * <code>required string tag = 2;</code>
      */
@@ -4025,8 +4017,9 @@ public final class App {
    * </pre>
    */
   public static final class Ping extends
-      com.google.protobuf.GeneratedMessage
-      implements PingOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:Ping)
+      PingOrBuilder {
     // Use Ping.newBuilder() to construct.
     private Ping(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
@@ -4078,8 +4071,9 @@ public final class App {
               break;
             }
             case 18: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000002;
-              tag_ = input.readBytes();
+              tag_ = bs;
               break;
             }
           }
@@ -4122,7 +4116,6 @@ public final class App {
     }
 
     private int bitField0_;
-    // required int32 number = 1;
     public static final int NUMBER_FIELD_NUMBER = 1;
     private int number_;
     /**
@@ -4138,7 +4131,6 @@ public final class App {
       return number_;
     }
 
-    // required string tag = 2;
     public static final int TAG_FIELD_NUMBER = 2;
     private java.lang.Object tag_;
     /**
@@ -4188,7 +4180,8 @@ public final class App {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
 
       if (!hasNumber()) {
         memoizedIsInitialized = 0;
@@ -4314,8 +4307,9 @@ public final class App {
      * </pre>
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements com.sjsu.cmpe.netty_chat.App.PingOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:Ping)
+        com.sjsu.cmpe.netty_chat.App.PingOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return com.sjsu.cmpe.netty_chat.App.internal_static_Ping_descriptor;
@@ -4447,7 +4441,6 @@ public final class App {
       }
       private int bitField0_;
 
-      // required int32 number = 1;
       private int number_ ;
       /**
        * <code>required int32 number = 1;</code>
@@ -4480,7 +4473,6 @@ public final class App {
         return this;
       }
 
-      // required string tag = 2;
       private java.lang.Object tag_ = "";
       /**
        * <code>required string tag = 2;</code>
@@ -4494,9 +4486,12 @@ public final class App {
       public java.lang.String getTag() {
         java.lang.Object ref = tag_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          tag_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            tag_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -4565,10 +4560,10 @@ public final class App {
     // @@protoc_insertion_point(class_scope:Ping)
   }
 
-  public interface NameSpaceOperationOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
+  public interface NameSpaceOperationOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:NameSpaceOperation)
+      com.google.protobuf.MessageOrBuilder {
 
-    // required .NameSpaceOperation.SpaceAction action = 1;
     /**
      * <code>required .NameSpaceOperation.SpaceAction action = 1;</code>
      */
@@ -4578,7 +4573,6 @@ public final class App {
      */
     com.sjsu.cmpe.netty_chat.App.NameSpaceOperation.SpaceAction getAction();
 
-    // optional int64 ns_id = 2 [default = -1];
     /**
      * <code>optional int64 ns_id = 2 [default = -1];</code>
      */
@@ -4588,7 +4582,6 @@ public final class App {
      */
     long getNsId();
 
-    // optional .NameSpace data = 3;
     /**
      * <code>optional .NameSpace data = 3;</code>
      */
@@ -4602,7 +4595,6 @@ public final class App {
      */
     com.sjsu.cmpe.netty_chat.App.NameSpaceOrBuilder getDataOrBuilder();
 
-    // optional .NameValueSet options = 4;
     /**
      * <code>optional .NameValueSet options = 4;</code>
      *
@@ -4636,8 +4628,9 @@ public final class App {
    * </pre>
    */
   public static final class NameSpaceOperation extends
-      com.google.protobuf.GeneratedMessage
-      implements NameSpaceOperationOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:NameSpaceOperation)
+      NameSpaceOperationOrBuilder {
     // Use NameSpaceOperation.newBuilder() to construct.
     private NameSpaceOperation(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
@@ -4865,7 +4858,6 @@ public final class App {
     }
 
     private int bitField0_;
-    // required .NameSpaceOperation.SpaceAction action = 1;
     public static final int ACTION_FIELD_NUMBER = 1;
     private com.sjsu.cmpe.netty_chat.App.NameSpaceOperation.SpaceAction action_;
     /**
@@ -4881,7 +4873,6 @@ public final class App {
       return action_;
     }
 
-    // optional int64 ns_id = 2 [default = -1];
     public static final int NS_ID_FIELD_NUMBER = 2;
     private long nsId_;
     /**
@@ -4897,7 +4888,6 @@ public final class App {
       return nsId_;
     }
 
-    // optional .NameSpace data = 3;
     public static final int DATA_FIELD_NUMBER = 3;
     private com.sjsu.cmpe.netty_chat.App.NameSpace data_;
     /**
@@ -4919,7 +4909,6 @@ public final class App {
       return data_;
     }
 
-    // optional .NameValueSet options = 4;
     public static final int OPTIONS_FIELD_NUMBER = 4;
     private com.sjsu.cmpe.netty_chat.App.NameValueSet options_;
     /**
@@ -4962,7 +4951,8 @@ public final class App {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
 
       if (!hasAction()) {
         memoizedIsInitialized = 0;
@@ -5110,8 +5100,9 @@ public final class App {
      * </pre>
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements com.sjsu.cmpe.netty_chat.App.NameSpaceOperationOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:NameSpaceOperation)
+        com.sjsu.cmpe.netty_chat.App.NameSpaceOperationOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return com.sjsu.cmpe.netty_chat.App.internal_static_NameSpaceOperation_descriptor;
@@ -5285,7 +5276,6 @@ public final class App {
       }
       private int bitField0_;
 
-      // required .NameSpaceOperation.SpaceAction action = 1;
       private com.sjsu.cmpe.netty_chat.App.NameSpaceOperation.SpaceAction action_ = com.sjsu.cmpe.netty_chat.App.NameSpaceOperation.SpaceAction.ADDSPACE;
       /**
        * <code>required .NameSpaceOperation.SpaceAction action = 1;</code>
@@ -5321,7 +5311,6 @@ public final class App {
         return this;
       }
 
-      // optional int64 ns_id = 2 [default = -1];
       private long nsId_ = -1L;
       /**
        * <code>optional int64 ns_id = 2 [default = -1];</code>
@@ -5354,7 +5343,6 @@ public final class App {
         return this;
       }
 
-      // optional .NameSpace data = 3;
       private com.sjsu.cmpe.netty_chat.App.NameSpace data_ = com.sjsu.cmpe.netty_chat.App.NameSpace.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           com.sjsu.cmpe.netty_chat.App.NameSpace, com.sjsu.cmpe.netty_chat.App.NameSpace.Builder, com.sjsu.cmpe.netty_chat.App.NameSpaceOrBuilder> dataBuilder_;
@@ -5463,7 +5451,7 @@ public final class App {
         if (dataBuilder_ == null) {
           dataBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               com.sjsu.cmpe.netty_chat.App.NameSpace, com.sjsu.cmpe.netty_chat.App.NameSpace.Builder, com.sjsu.cmpe.netty_chat.App.NameSpaceOrBuilder>(
-                  data_,
+                  getData(),
                   getParentForChildren(),
                   isClean());
           data_ = null;
@@ -5471,7 +5459,6 @@ public final class App {
         return dataBuilder_;
       }
 
-      // optional .NameValueSet options = 4;
       private com.sjsu.cmpe.netty_chat.App.NameValueSet options_ = com.sjsu.cmpe.netty_chat.App.NameValueSet.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           com.sjsu.cmpe.netty_chat.App.NameValueSet, com.sjsu.cmpe.netty_chat.App.NameValueSet.Builder, com.sjsu.cmpe.netty_chat.App.NameValueSetOrBuilder> optionsBuilder_;
@@ -5616,7 +5603,7 @@ public final class App {
         if (optionsBuilder_ == null) {
           optionsBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               com.sjsu.cmpe.netty_chat.App.NameValueSet, com.sjsu.cmpe.netty_chat.App.NameValueSet.Builder, com.sjsu.cmpe.netty_chat.App.NameValueSetOrBuilder>(
-                  options_,
+                  getOptions(),
                   getParentForChildren(),
                   isClean());
           options_ = null;
@@ -5635,10 +5622,10 @@ public final class App {
     // @@protoc_insertion_point(class_scope:NameSpaceOperation)
   }
 
-  public interface NameSpaceStatusOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
+  public interface NameSpaceStatusOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:NameSpaceStatus)
+      com.google.protobuf.MessageOrBuilder {
 
-    // required .PokeStatus status = 1;
     /**
      * <code>required .PokeStatus status = 1;</code>
      */
@@ -5648,7 +5635,6 @@ public final class App {
      */
     com.sjsu.cmpe.netty_chat.App.PokeStatus getStatus();
 
-    // repeated .NameSpace data = 2;
     /**
      * <code>repeated .NameSpace data = 2;</code>
      *
@@ -5701,8 +5687,9 @@ public final class App {
    * </pre>
    */
   public static final class NameSpaceStatus extends
-      com.google.protobuf.GeneratedMessage
-      implements NameSpaceStatusOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:NameSpaceStatus)
+      NameSpaceStatusOrBuilder {
     // Use NameSpaceStatus.newBuilder() to construct.
     private NameSpaceStatus(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
@@ -5810,7 +5797,6 @@ public final class App {
     }
 
     private int bitField0_;
-    // required .PokeStatus status = 1;
     public static final int STATUS_FIELD_NUMBER = 1;
     private com.sjsu.cmpe.netty_chat.App.PokeStatus status_;
     /**
@@ -5826,7 +5812,6 @@ public final class App {
       return status_;
     }
 
-    // repeated .NameSpace data = 2;
     public static final int DATA_FIELD_NUMBER = 2;
     private java.util.List<com.sjsu.cmpe.netty_chat.App.NameSpace> data_;
     /**
@@ -5889,7 +5874,8 @@ public final class App {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
 
       if (!hasStatus()) {
         memoizedIsInitialized = 0;
@@ -6017,8 +6003,9 @@ public final class App {
      * </pre>
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements com.sjsu.cmpe.netty_chat.App.NameSpaceStatusOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:NameSpaceStatus)
+        com.sjsu.cmpe.netty_chat.App.NameSpaceStatusOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return com.sjsu.cmpe.netty_chat.App.internal_static_NameSpaceStatus_descriptor;
@@ -6183,7 +6170,6 @@ public final class App {
       }
       private int bitField0_;
 
-      // required .PokeStatus status = 1;
       private com.sjsu.cmpe.netty_chat.App.PokeStatus status_ = com.sjsu.cmpe.netty_chat.App.PokeStatus.UKNOWN;
       /**
        * <code>required .PokeStatus status = 1;</code>
@@ -6219,7 +6205,6 @@ public final class App {
         return this;
       }
 
-      // repeated .NameSpace data = 2;
       private java.util.List<com.sjsu.cmpe.netty_chat.App.NameSpace> data_ =
         java.util.Collections.emptyList();
       private void ensureDataIsMutable() {
@@ -6401,7 +6386,8 @@ public final class App {
           java.lang.Iterable<? extends com.sjsu.cmpe.netty_chat.App.NameSpace> values) {
         if (dataBuilder_ == null) {
           ensureDataIsMutable();
-          super.addAll(values, data_);
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, data_);
           onChanged();
         } else {
           dataBuilder_.addAllMessages(values);
@@ -6542,10 +6528,10 @@ public final class App {
     // @@protoc_insertion_point(class_scope:NameSpaceStatus)
   }
 
-  public interface JobOperationOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
+  public interface JobOperationOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:JobOperation)
+      com.google.protobuf.MessageOrBuilder {
 
-    // required .JobOperation.JobAction action = 1;
     /**
      * <code>required .JobOperation.JobAction action = 1;</code>
      */
@@ -6555,7 +6541,6 @@ public final class App {
      */
     com.sjsu.cmpe.netty_chat.App.JobOperation.JobAction getAction();
 
-    // optional string job_id = 2;
     /**
      * <code>optional string job_id = 2;</code>
      *
@@ -6582,7 +6567,6 @@ public final class App {
     com.google.protobuf.ByteString
         getJobIdBytes();
 
-    // optional .JobDesc data = 3;
     /**
      * <code>optional .JobDesc data = 3;</code>
      *
@@ -6608,7 +6592,6 @@ public final class App {
      */
     com.sjsu.cmpe.netty_chat.App.JobDescOrBuilder getDataOrBuilder();
 
-    // optional .JobProposal job_propose = 5;
     /**
      * <code>optional .JobProposal job_propose = 5;</code>
      */
@@ -6622,7 +6605,6 @@ public final class App {
      */
     com.sjsu.cmpe.netty_chat.App.JobProposalOrBuilder getJobProposeOrBuilder();
 
-    // optional .JobBid job_bid = 6;
     /**
      * <code>optional .JobBid job_bid = 6;</code>
      */
@@ -6641,15 +6623,15 @@ public final class App {
    *
    * <pre>
    * external and internal requests - a job operation
-   *
    * since job control is both external (show, add, stop, remove, list) and 
    * internal (propose, bid), we need to ensure that only authorized nodes 
    * can make protected requests
    * </pre>
    */
   public static final class JobOperation extends
-      com.google.protobuf.GeneratedMessage
-      implements JobOperationOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:JobOperation)
+      JobOperationOrBuilder {
     // Use JobOperation.newBuilder() to construct.
     private JobOperation(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
@@ -6707,8 +6689,9 @@ public final class App {
               break;
             }
             case 18: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000002;
-              jobId_ = input.readBytes();
+              jobId_ = bs;
               break;
             }
             case 26: {
@@ -6917,7 +6900,6 @@ public final class App {
     }
 
     private int bitField0_;
-    // required .JobOperation.JobAction action = 1;
     public static final int ACTION_FIELD_NUMBER = 1;
     private com.sjsu.cmpe.netty_chat.App.JobOperation.JobAction action_;
     /**
@@ -6933,7 +6915,6 @@ public final class App {
       return action_;
     }
 
-    // optional string job_id = 2;
     public static final int JOB_ID_FIELD_NUMBER = 2;
     private java.lang.Object jobId_;
     /**
@@ -6988,7 +6969,6 @@ public final class App {
       }
     }
 
-    // optional .JobDesc data = 3;
     public static final int DATA_FIELD_NUMBER = 3;
     private com.sjsu.cmpe.netty_chat.App.JobDesc data_;
     /**
@@ -7022,7 +7002,6 @@ public final class App {
       return data_;
     }
 
-    // optional .JobProposal job_propose = 5;
     public static final int JOB_PROPOSE_FIELD_NUMBER = 5;
     private com.sjsu.cmpe.netty_chat.App.JobProposal jobPropose_;
     /**
@@ -7044,7 +7023,6 @@ public final class App {
       return jobPropose_;
     }
 
-    // optional .JobBid job_bid = 6;
     public static final int JOB_BID_FIELD_NUMBER = 6;
     private com.sjsu.cmpe.netty_chat.App.JobBid jobBid_;
     /**
@@ -7076,7 +7054,8 @@ public final class App {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
 
       if (!hasAction()) {
         memoizedIsInitialized = 0;
@@ -7234,15 +7213,15 @@ public final class App {
      *
      * <pre>
      * external and internal requests - a job operation
-     *
      * since job control is both external (show, add, stop, remove, list) and 
      * internal (propose, bid), we need to ensure that only authorized nodes 
      * can make protected requests
      * </pre>
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements com.sjsu.cmpe.netty_chat.App.JobOperationOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:JobOperation)
+        com.sjsu.cmpe.netty_chat.App.JobOperationOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return com.sjsu.cmpe.netty_chat.App.internal_static_JobOperation_descriptor;
@@ -7442,7 +7421,6 @@ public final class App {
       }
       private int bitField0_;
 
-      // required .JobOperation.JobAction action = 1;
       private com.sjsu.cmpe.netty_chat.App.JobOperation.JobAction action_ = com.sjsu.cmpe.netty_chat.App.JobOperation.JobAction.SHOWJOB;
       /**
        * <code>required .JobOperation.JobAction action = 1;</code>
@@ -7478,7 +7456,6 @@ public final class App {
         return this;
       }
 
-      // optional string job_id = 2;
       private java.lang.Object jobId_ = "";
       /**
        * <code>optional string job_id = 2;</code>
@@ -7500,9 +7477,12 @@ public final class App {
       public java.lang.String getJobId() {
         java.lang.Object ref = jobId_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          jobId_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            jobId_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -7576,7 +7556,6 @@ public final class App {
         return this;
       }
 
-      // optional .JobDesc data = 3;
       private com.sjsu.cmpe.netty_chat.App.JobDesc data_ = com.sjsu.cmpe.netty_chat.App.JobDesc.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           com.sjsu.cmpe.netty_chat.App.JobDesc, com.sjsu.cmpe.netty_chat.App.JobDesc.Builder, com.sjsu.cmpe.netty_chat.App.JobDescOrBuilder> dataBuilder_;
@@ -7721,7 +7700,7 @@ public final class App {
         if (dataBuilder_ == null) {
           dataBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               com.sjsu.cmpe.netty_chat.App.JobDesc, com.sjsu.cmpe.netty_chat.App.JobDesc.Builder, com.sjsu.cmpe.netty_chat.App.JobDescOrBuilder>(
-                  data_,
+                  getData(),
                   getParentForChildren(),
                   isClean());
           data_ = null;
@@ -7729,7 +7708,6 @@ public final class App {
         return dataBuilder_;
       }
 
-      // optional .JobProposal job_propose = 5;
       private com.sjsu.cmpe.netty_chat.App.JobProposal jobPropose_ = com.sjsu.cmpe.netty_chat.App.JobProposal.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           com.sjsu.cmpe.netty_chat.App.JobProposal, com.sjsu.cmpe.netty_chat.App.JobProposal.Builder, com.sjsu.cmpe.netty_chat.App.JobProposalOrBuilder> jobProposeBuilder_;
@@ -7838,7 +7816,7 @@ public final class App {
         if (jobProposeBuilder_ == null) {
           jobProposeBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               com.sjsu.cmpe.netty_chat.App.JobProposal, com.sjsu.cmpe.netty_chat.App.JobProposal.Builder, com.sjsu.cmpe.netty_chat.App.JobProposalOrBuilder>(
-                  jobPropose_,
+                  getJobPropose(),
                   getParentForChildren(),
                   isClean());
           jobPropose_ = null;
@@ -7846,7 +7824,6 @@ public final class App {
         return jobProposeBuilder_;
       }
 
-      // optional .JobBid job_bid = 6;
       private com.sjsu.cmpe.netty_chat.App.JobBid jobBid_ = com.sjsu.cmpe.netty_chat.App.JobBid.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           com.sjsu.cmpe.netty_chat.App.JobBid, com.sjsu.cmpe.netty_chat.App.JobBid.Builder, com.sjsu.cmpe.netty_chat.App.JobBidOrBuilder> jobBidBuilder_;
@@ -7955,7 +7932,7 @@ public final class App {
         if (jobBidBuilder_ == null) {
           jobBidBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               com.sjsu.cmpe.netty_chat.App.JobBid, com.sjsu.cmpe.netty_chat.App.JobBid.Builder, com.sjsu.cmpe.netty_chat.App.JobBidOrBuilder>(
-                  jobBid_,
+                  getJobBid(),
                   getParentForChildren(),
                   isClean());
           jobBid_ = null;
@@ -7974,10 +7951,10 @@ public final class App {
     // @@protoc_insertion_point(class_scope:JobOperation)
   }
 
-  public interface JobProposalOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
+  public interface JobProposalOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:JobProposal)
+      com.google.protobuf.MessageOrBuilder {
 
-    // required string name_space = 1;
     /**
      * <code>required string name_space = 1;</code>
      */
@@ -7992,7 +7969,6 @@ public final class App {
     com.google.protobuf.ByteString
         getNameSpaceBytes();
 
-    // required int64 owner_id = 2;
     /**
      * <code>required int64 owner_id = 2;</code>
      */
@@ -8002,7 +7978,6 @@ public final class App {
      */
     long getOwnerId();
 
-    // required string job_id = 3;
     /**
      * <code>required string job_id = 3;</code>
      */
@@ -8017,7 +7992,6 @@ public final class App {
     com.google.protobuf.ByteString
         getJobIdBytes();
 
-    // required int32 weight = 4;
     /**
      * <code>required int32 weight = 4;</code>
      *
@@ -8037,7 +8011,6 @@ public final class App {
      */
     int getWeight();
 
-    // optional .NameValueSet options = 5;
     /**
      * <code>optional .NameValueSet options = 5;</code>
      *
@@ -8063,7 +8036,6 @@ public final class App {
      */
     com.sjsu.cmpe.netty_chat.App.NameValueSetOrBuilder getOptionsOrBuilder();
 
-    // required string authorizationCode = 6;
     /**
      * <code>required string authorizationCode = 6;</code>
      *
@@ -8098,8 +8070,9 @@ public final class App {
    * </pre>
    */
   public static final class JobProposal extends
-      com.google.protobuf.GeneratedMessage
-      implements JobProposalOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:JobProposal)
+      JobProposalOrBuilder {
     // Use JobProposal.newBuilder() to construct.
     private JobProposal(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
@@ -8146,8 +8119,9 @@ public final class App {
               break;
             }
             case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000001;
-              nameSpace_ = input.readBytes();
+              nameSpace_ = bs;
               break;
             }
             case 16: {
@@ -8156,8 +8130,9 @@ public final class App {
               break;
             }
             case 26: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000004;
-              jobId_ = input.readBytes();
+              jobId_ = bs;
               break;
             }
             case 32: {
@@ -8179,8 +8154,9 @@ public final class App {
               break;
             }
             case 50: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000020;
-              authorizationCode_ = input.readBytes();
+              authorizationCode_ = bs;
               break;
             }
           }
@@ -8223,7 +8199,6 @@ public final class App {
     }
 
     private int bitField0_;
-    // required string name_space = 1;
     public static final int NAME_SPACE_FIELD_NUMBER = 1;
     private java.lang.Object nameSpace_;
     /**
@@ -8266,7 +8241,6 @@ public final class App {
       }
     }
 
-    // required int64 owner_id = 2;
     public static final int OWNER_ID_FIELD_NUMBER = 2;
     private long ownerId_;
     /**
@@ -8282,7 +8256,6 @@ public final class App {
       return ownerId_;
     }
 
-    // required string job_id = 3;
     public static final int JOB_ID_FIELD_NUMBER = 3;
     private java.lang.Object jobId_;
     /**
@@ -8325,7 +8298,6 @@ public final class App {
       }
     }
 
-    // required int32 weight = 4;
     public static final int WEIGHT_FIELD_NUMBER = 4;
     private int weight_;
     /**
@@ -8351,7 +8323,6 @@ public final class App {
       return weight_;
     }
 
-    // optional .NameValueSet options = 5;
     public static final int OPTIONS_FIELD_NUMBER = 5;
     private com.sjsu.cmpe.netty_chat.App.NameValueSet options_;
     /**
@@ -8385,7 +8356,6 @@ public final class App {
       return options_;
     }
 
-    // required string authorizationCode = 6;
     public static final int AUTHORIZATIONCODE_FIELD_NUMBER = 6;
     private java.lang.Object authorizationCode_;
     /**
@@ -8451,7 +8421,8 @@ public final class App {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
 
       if (!hasNameSpace()) {
         memoizedIsInitialized = 0;
@@ -8623,8 +8594,9 @@ public final class App {
      * </pre>
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements com.sjsu.cmpe.netty_chat.App.JobProposalOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:JobProposal)
+        com.sjsu.cmpe.netty_chat.App.JobProposalOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return com.sjsu.cmpe.netty_chat.App.internal_static_JobProposal_descriptor;
@@ -8823,7 +8795,6 @@ public final class App {
       }
       private int bitField0_;
 
-      // required string name_space = 1;
       private java.lang.Object nameSpace_ = "";
       /**
        * <code>required string name_space = 1;</code>
@@ -8837,9 +8808,12 @@ public final class App {
       public java.lang.String getNameSpace() {
         java.lang.Object ref = nameSpace_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          nameSpace_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            nameSpace_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -8897,7 +8871,6 @@ public final class App {
         return this;
       }
 
-      // required int64 owner_id = 2;
       private long ownerId_ ;
       /**
        * <code>required int64 owner_id = 2;</code>
@@ -8930,7 +8903,6 @@ public final class App {
         return this;
       }
 
-      // required string job_id = 3;
       private java.lang.Object jobId_ = "";
       /**
        * <code>required string job_id = 3;</code>
@@ -8944,9 +8916,12 @@ public final class App {
       public java.lang.String getJobId() {
         java.lang.Object ref = jobId_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          jobId_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            jobId_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -9004,7 +8979,6 @@ public final class App {
         return this;
       }
 
-      // required int32 weight = 4;
       private int weight_ ;
       /**
        * <code>required int32 weight = 4;</code>
@@ -9057,7 +9031,6 @@ public final class App {
         return this;
       }
 
-      // optional .NameValueSet options = 5;
       private com.sjsu.cmpe.netty_chat.App.NameValueSet options_ = com.sjsu.cmpe.netty_chat.App.NameValueSet.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           com.sjsu.cmpe.netty_chat.App.NameValueSet, com.sjsu.cmpe.netty_chat.App.NameValueSet.Builder, com.sjsu.cmpe.netty_chat.App.NameValueSetOrBuilder> optionsBuilder_;
@@ -9202,7 +9175,7 @@ public final class App {
         if (optionsBuilder_ == null) {
           optionsBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               com.sjsu.cmpe.netty_chat.App.NameValueSet, com.sjsu.cmpe.netty_chat.App.NameValueSet.Builder, com.sjsu.cmpe.netty_chat.App.NameValueSetOrBuilder>(
-                  options_,
+                  getOptions(),
                   getParentForChildren(),
                   isClean());
           options_ = null;
@@ -9210,7 +9183,6 @@ public final class App {
         return optionsBuilder_;
       }
 
-      // required string authorizationCode = 6;
       private java.lang.Object authorizationCode_ = "";
       /**
        * <code>required string authorizationCode = 6;</code>
@@ -9232,9 +9204,12 @@ public final class App {
       public java.lang.String getAuthorizationCode() {
         java.lang.Object ref = authorizationCode_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          authorizationCode_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            authorizationCode_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -9319,10 +9294,10 @@ public final class App {
     // @@protoc_insertion_point(class_scope:JobProposal)
   }
 
-  public interface JobBidOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
+  public interface JobBidOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:JobBid)
+      com.google.protobuf.MessageOrBuilder {
 
-    // required string name_space = 1;
     /**
      * <code>required string name_space = 1;</code>
      */
@@ -9337,7 +9312,6 @@ public final class App {
     com.google.protobuf.ByteString
         getNameSpaceBytes();
 
-    // required int64 owner_id = 2;
     /**
      * <code>required int64 owner_id = 2;</code>
      */
@@ -9347,7 +9321,6 @@ public final class App {
      */
     long getOwnerId();
 
-    // required string job_id = 3;
     /**
      * <code>required string job_id = 3;</code>
      */
@@ -9362,7 +9335,6 @@ public final class App {
     com.google.protobuf.ByteString
         getJobIdBytes();
 
-    // required int32 bid = 4;
     /**
      * <code>required int32 bid = 4;</code>
      *
@@ -9382,7 +9354,6 @@ public final class App {
      */
     int getBid();
 
-    // required string securityCode = 6;
     /**
      * <code>required string securityCode = 6;</code>
      *
@@ -9417,8 +9388,9 @@ public final class App {
    * </pre>
    */
   public static final class JobBid extends
-      com.google.protobuf.GeneratedMessage
-      implements JobBidOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:JobBid)
+      JobBidOrBuilder {
     // Use JobBid.newBuilder() to construct.
     private JobBid(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
@@ -9465,8 +9437,9 @@ public final class App {
               break;
             }
             case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000001;
-              nameSpace_ = input.readBytes();
+              nameSpace_ = bs;
               break;
             }
             case 16: {
@@ -9475,8 +9448,9 @@ public final class App {
               break;
             }
             case 26: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000004;
-              jobId_ = input.readBytes();
+              jobId_ = bs;
               break;
             }
             case 32: {
@@ -9485,8 +9459,9 @@ public final class App {
               break;
             }
             case 50: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000010;
-              securityCode_ = input.readBytes();
+              securityCode_ = bs;
               break;
             }
           }
@@ -9529,7 +9504,6 @@ public final class App {
     }
 
     private int bitField0_;
-    // required string name_space = 1;
     public static final int NAME_SPACE_FIELD_NUMBER = 1;
     private java.lang.Object nameSpace_;
     /**
@@ -9572,7 +9546,6 @@ public final class App {
       }
     }
 
-    // required int64 owner_id = 2;
     public static final int OWNER_ID_FIELD_NUMBER = 2;
     private long ownerId_;
     /**
@@ -9588,7 +9561,6 @@ public final class App {
       return ownerId_;
     }
 
-    // required string job_id = 3;
     public static final int JOB_ID_FIELD_NUMBER = 3;
     private java.lang.Object jobId_;
     /**
@@ -9631,7 +9603,6 @@ public final class App {
       }
     }
 
-    // required int32 bid = 4;
     public static final int BID_FIELD_NUMBER = 4;
     private int bid_;
     /**
@@ -9657,7 +9628,6 @@ public final class App {
       return bid_;
     }
 
-    // required string securityCode = 6;
     public static final int SECURITYCODE_FIELD_NUMBER = 6;
     private java.lang.Object securityCode_;
     /**
@@ -9722,7 +9692,8 @@ public final class App {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
 
       if (!hasNameSpace()) {
         memoizedIsInitialized = 0;
@@ -9881,8 +9852,9 @@ public final class App {
      * </pre>
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements com.sjsu.cmpe.netty_chat.App.JobBidOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:JobBid)
+        com.sjsu.cmpe.netty_chat.App.JobBidOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return com.sjsu.cmpe.netty_chat.App.internal_static_JobBid_descriptor;
@@ -10057,7 +10029,6 @@ public final class App {
       }
       private int bitField0_;
 
-      // required string name_space = 1;
       private java.lang.Object nameSpace_ = "";
       /**
        * <code>required string name_space = 1;</code>
@@ -10071,9 +10042,12 @@ public final class App {
       public java.lang.String getNameSpace() {
         java.lang.Object ref = nameSpace_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          nameSpace_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            nameSpace_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -10131,7 +10105,6 @@ public final class App {
         return this;
       }
 
-      // required int64 owner_id = 2;
       private long ownerId_ ;
       /**
        * <code>required int64 owner_id = 2;</code>
@@ -10164,7 +10137,6 @@ public final class App {
         return this;
       }
 
-      // required string job_id = 3;
       private java.lang.Object jobId_ = "";
       /**
        * <code>required string job_id = 3;</code>
@@ -10178,9 +10150,12 @@ public final class App {
       public java.lang.String getJobId() {
         java.lang.Object ref = jobId_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          jobId_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            jobId_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -10238,7 +10213,6 @@ public final class App {
         return this;
       }
 
-      // required int32 bid = 4;
       private int bid_ ;
       /**
        * <code>required int32 bid = 4;</code>
@@ -10291,7 +10265,6 @@ public final class App {
         return this;
       }
 
-      // required string securityCode = 6;
       private java.lang.Object securityCode_ = "";
       /**
        * <code>required string securityCode = 6;</code>
@@ -10313,9 +10286,12 @@ public final class App {
       public java.lang.String getSecurityCode() {
         java.lang.Object ref = securityCode_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          securityCode_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            securityCode_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -10400,10 +10376,10 @@ public final class App {
     // @@protoc_insertion_point(class_scope:JobBid)
   }
 
-  public interface JobStatusOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
+  public interface JobStatusOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:JobStatus)
+      com.google.protobuf.MessageOrBuilder {
 
-    // required string job_id = 1;
     /**
      * <code>required string job_id = 1;</code>
      */
@@ -10418,7 +10394,6 @@ public final class App {
     com.google.protobuf.ByteString
         getJobIdBytes();
 
-    // required .PokeStatus status = 2;
     /**
      * <code>required .PokeStatus status = 2;</code>
      */
@@ -10428,7 +10403,6 @@ public final class App {
      */
     com.sjsu.cmpe.netty_chat.App.PokeStatus getStatus();
 
-    // required .JobDesc.JobCode job_state = 3;
     /**
      * <code>required .JobDesc.JobCode job_state = 3;</code>
      */
@@ -10438,7 +10412,6 @@ public final class App {
      */
     com.sjsu.cmpe.netty_chat.App.JobDesc.JobCode getJobState();
 
-    // repeated .JobDesc data = 4;
     /**
      * <code>repeated .JobDesc data = 4;</code>
      *
@@ -10491,8 +10464,9 @@ public final class App {
    * </pre>
    */
   public static final class JobStatus extends
-      com.google.protobuf.GeneratedMessage
-      implements JobStatusOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:JobStatus)
+      JobStatusOrBuilder {
     // Use JobStatus.newBuilder() to construct.
     private JobStatus(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
@@ -10539,8 +10513,9 @@ public final class App {
               break;
             }
             case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000001;
-              jobId_ = input.readBytes();
+              jobId_ = bs;
               break;
             }
             case 16: {
@@ -10616,7 +10591,6 @@ public final class App {
     }
 
     private int bitField0_;
-    // required string job_id = 1;
     public static final int JOB_ID_FIELD_NUMBER = 1;
     private java.lang.Object jobId_;
     /**
@@ -10659,7 +10633,6 @@ public final class App {
       }
     }
 
-    // required .PokeStatus status = 2;
     public static final int STATUS_FIELD_NUMBER = 2;
     private com.sjsu.cmpe.netty_chat.App.PokeStatus status_;
     /**
@@ -10675,7 +10648,6 @@ public final class App {
       return status_;
     }
 
-    // required .JobDesc.JobCode job_state = 3;
     public static final int JOB_STATE_FIELD_NUMBER = 3;
     private com.sjsu.cmpe.netty_chat.App.JobDesc.JobCode jobState_;
     /**
@@ -10691,7 +10663,6 @@ public final class App {
       return jobState_;
     }
 
-    // repeated .JobDesc data = 4;
     public static final int DATA_FIELD_NUMBER = 4;
     private java.util.List<com.sjsu.cmpe.netty_chat.App.JobDesc> data_;
     /**
@@ -10756,7 +10727,8 @@ public final class App {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
 
       if (!hasJobId()) {
         memoizedIsInitialized = 0;
@@ -10906,8 +10878,9 @@ public final class App {
      * </pre>
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements com.sjsu.cmpe.netty_chat.App.JobStatusOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:JobStatus)
+        com.sjsu.cmpe.netty_chat.App.JobStatusOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return com.sjsu.cmpe.netty_chat.App.internal_static_JobStatus_descriptor;
@@ -11100,7 +11073,6 @@ public final class App {
       }
       private int bitField0_;
 
-      // required string job_id = 1;
       private java.lang.Object jobId_ = "";
       /**
        * <code>required string job_id = 1;</code>
@@ -11114,9 +11086,12 @@ public final class App {
       public java.lang.String getJobId() {
         java.lang.Object ref = jobId_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          jobId_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            jobId_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -11174,7 +11149,6 @@ public final class App {
         return this;
       }
 
-      // required .PokeStatus status = 2;
       private com.sjsu.cmpe.netty_chat.App.PokeStatus status_ = com.sjsu.cmpe.netty_chat.App.PokeStatus.UKNOWN;
       /**
        * <code>required .PokeStatus status = 2;</code>
@@ -11210,7 +11184,6 @@ public final class App {
         return this;
       }
 
-      // required .JobDesc.JobCode job_state = 3;
       private com.sjsu.cmpe.netty_chat.App.JobDesc.JobCode jobState_ = com.sjsu.cmpe.netty_chat.App.JobDesc.JobCode.JOBUNKNOWN;
       /**
        * <code>required .JobDesc.JobCode job_state = 3;</code>
@@ -11246,7 +11219,6 @@ public final class App {
         return this;
       }
 
-      // repeated .JobDesc data = 4;
       private java.util.List<com.sjsu.cmpe.netty_chat.App.JobDesc> data_ =
         java.util.Collections.emptyList();
       private void ensureDataIsMutable() {
@@ -11428,7 +11400,8 @@ public final class App {
           java.lang.Iterable<? extends com.sjsu.cmpe.netty_chat.App.JobDesc> values) {
         if (dataBuilder_ == null) {
           ensureDataIsMutable();
-          super.addAll(values, data_);
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, data_);
           onChanged();
         } else {
           dataBuilder_.addAllMessages(values);
@@ -11569,10 +11542,10 @@ public final class App {
     // @@protoc_insertion_point(class_scope:JobStatus)
   }
 
-  public interface RoutingPathOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
+  public interface RoutingPathOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:RoutingPath)
+      com.google.protobuf.MessageOrBuilder {
 
-    // required int32 node_id = 1;
     /**
      * <code>required int32 node_id = 1;</code>
      */
@@ -11582,7 +11555,6 @@ public final class App {
      */
     int getNodeId();
 
-    // required int64 time = 2;
     /**
      * <code>required int64 time = 2;</code>
      */
@@ -11596,8 +11568,9 @@ public final class App {
    * Protobuf type {@code RoutingPath}
    */
   public static final class RoutingPath extends
-      com.google.protobuf.GeneratedMessage
-      implements RoutingPathOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:RoutingPath)
+      RoutingPathOrBuilder {
     // Use RoutingPath.newBuilder() to construct.
     private RoutingPath(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
@@ -11693,7 +11666,6 @@ public final class App {
     }
 
     private int bitField0_;
-    // required int32 node_id = 1;
     public static final int NODE_ID_FIELD_NUMBER = 1;
     private int nodeId_;
     /**
@@ -11709,7 +11681,6 @@ public final class App {
       return nodeId_;
     }
 
-    // required int64 time = 2;
     public static final int TIME_FIELD_NUMBER = 2;
     private long time_;
     /**
@@ -11732,7 +11703,8 @@ public final class App {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
 
       if (!hasNodeId()) {
         memoizedIsInitialized = 0;
@@ -11854,8 +11826,9 @@ public final class App {
      * Protobuf type {@code RoutingPath}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements com.sjsu.cmpe.netty_chat.App.RoutingPathOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:RoutingPath)
+        com.sjsu.cmpe.netty_chat.App.RoutingPathOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return com.sjsu.cmpe.netty_chat.App.internal_static_RoutingPath_descriptor;
@@ -11985,7 +11958,6 @@ public final class App {
       }
       private int bitField0_;
 
-      // required int32 node_id = 1;
       private int nodeId_ ;
       /**
        * <code>required int32 node_id = 1;</code>
@@ -12018,7 +11990,6 @@ public final class App {
         return this;
       }
 
-      // required int64 time = 2;
       private long time_ ;
       /**
        * <code>required int64 time = 2;</code>
@@ -12062,10 +12033,10 @@ public final class App {
     // @@protoc_insertion_point(class_scope:RoutingPath)
   }
 
-  public interface HeaderOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
+  public interface HeaderOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Header)
+      com.google.protobuf.MessageOrBuilder {
 
-    // required .Header.Routing routing_id = 1;
     /**
      * <code>required .Header.Routing routing_id = 1;</code>
      */
@@ -12075,7 +12046,6 @@ public final class App {
      */
     com.sjsu.cmpe.netty_chat.App.Header.Routing getRoutingId();
 
-    // required int32 originator = 2;
     /**
      * <code>required int32 originator = 2;</code>
      */
@@ -12085,7 +12055,6 @@ public final class App {
      */
     int getOriginator();
 
-    // optional string tag = 3;
     /**
      * <code>optional string tag = 3;</code>
      */
@@ -12100,7 +12069,6 @@ public final class App {
     com.google.protobuf.ByteString
         getTagBytes();
 
-    // optional int64 time = 4;
     /**
      * <code>optional int64 time = 4;</code>
      */
@@ -12110,7 +12078,6 @@ public final class App {
      */
     long getTime();
 
-    // optional .PokeStatus reply_code = 5;
     /**
      * <code>optional .PokeStatus reply_code = 5;</code>
      */
@@ -12120,7 +12087,6 @@ public final class App {
      */
     com.sjsu.cmpe.netty_chat.App.PokeStatus getReplyCode();
 
-    // optional string reply_msg = 6;
     /**
      * <code>optional string reply_msg = 6;</code>
      */
@@ -12135,7 +12101,6 @@ public final class App {
     com.google.protobuf.ByteString
         getReplyMsgBytes();
 
-    // repeated .RoutingPath path = 7;
     /**
      * <code>repeated .RoutingPath path = 7;</code>
      *
@@ -12180,7 +12145,6 @@ public final class App {
     com.sjsu.cmpe.netty_chat.App.RoutingPathOrBuilder getPathOrBuilder(
         int index);
 
-    // optional int32 toNode = 8;
     /**
      * <code>optional int32 toNode = 8;</code>
      *
@@ -12198,7 +12162,6 @@ public final class App {
      */
     int getToNode();
 
-    // repeated .NameValueSet options = 9;
     /**
      * <code>repeated .NameValueSet options = 9;</code>
      *
@@ -12247,8 +12210,9 @@ public final class App {
    * Protobuf type {@code Header}
    */
   public static final class Header extends
-      com.google.protobuf.GeneratedMessage
-      implements HeaderOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:Header)
+      HeaderOrBuilder {
     // Use Header.newBuilder() to construct.
     private Header(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
@@ -12311,8 +12275,9 @@ public final class App {
               break;
             }
             case 26: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000004;
-              tag_ = input.readBytes();
+              tag_ = bs;
               break;
             }
             case 32: {
@@ -12332,8 +12297,9 @@ public final class App {
               break;
             }
             case 50: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000020;
-              replyMsg_ = input.readBytes();
+              replyMsg_ = bs;
               break;
             }
             case 58: {
@@ -12512,7 +12478,6 @@ public final class App {
     }
 
     private int bitField0_;
-    // required .Header.Routing routing_id = 1;
     public static final int ROUTING_ID_FIELD_NUMBER = 1;
     private com.sjsu.cmpe.netty_chat.App.Header.Routing routingId_;
     /**
@@ -12528,7 +12493,6 @@ public final class App {
       return routingId_;
     }
 
-    // required int32 originator = 2;
     public static final int ORIGINATOR_FIELD_NUMBER = 2;
     private int originator_;
     /**
@@ -12544,7 +12508,6 @@ public final class App {
       return originator_;
     }
 
-    // optional string tag = 3;
     public static final int TAG_FIELD_NUMBER = 3;
     private java.lang.Object tag_;
     /**
@@ -12587,7 +12550,6 @@ public final class App {
       }
     }
 
-    // optional int64 time = 4;
     public static final int TIME_FIELD_NUMBER = 4;
     private long time_;
     /**
@@ -12603,7 +12565,6 @@ public final class App {
       return time_;
     }
 
-    // optional .PokeStatus reply_code = 5;
     public static final int REPLY_CODE_FIELD_NUMBER = 5;
     private com.sjsu.cmpe.netty_chat.App.PokeStatus replyCode_;
     /**
@@ -12619,7 +12580,6 @@ public final class App {
       return replyCode_;
     }
 
-    // optional string reply_msg = 6;
     public static final int REPLY_MSG_FIELD_NUMBER = 6;
     private java.lang.Object replyMsg_;
     /**
@@ -12662,7 +12622,6 @@ public final class App {
       }
     }
 
-    // repeated .RoutingPath path = 7;
     public static final int PATH_FIELD_NUMBER = 7;
     private java.util.List<com.sjsu.cmpe.netty_chat.App.RoutingPath> path_;
     /**
@@ -12718,7 +12677,6 @@ public final class App {
       return path_.get(index);
     }
 
-    // optional int32 toNode = 8;
     public static final int TONODE_FIELD_NUMBER = 8;
     private int toNode_;
     /**
@@ -12742,7 +12700,6 @@ public final class App {
       return toNode_;
     }
 
-    // repeated .NameValueSet options = 9;
     public static final int OPTIONS_FIELD_NUMBER = 9;
     private java.util.List<com.sjsu.cmpe.netty_chat.App.NameValueSet> options_;
     /**
@@ -12812,7 +12769,8 @@ public final class App {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
 
       if (!hasRoutingId()) {
         memoizedIsInitialized = 0;
@@ -12995,8 +12953,9 @@ public final class App {
      * Protobuf type {@code Header}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements com.sjsu.cmpe.netty_chat.App.HeaderOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:Header)
+        com.sjsu.cmpe.netty_chat.App.HeaderOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return com.sjsu.cmpe.netty_chat.App.internal_static_Header_descriptor;
@@ -13271,7 +13230,6 @@ public final class App {
       }
       private int bitField0_;
 
-      // required .Header.Routing routing_id = 1;
       private com.sjsu.cmpe.netty_chat.App.Header.Routing routingId_ = com.sjsu.cmpe.netty_chat.App.Header.Routing.PING;
       /**
        * <code>required .Header.Routing routing_id = 1;</code>
@@ -13307,7 +13265,6 @@ public final class App {
         return this;
       }
 
-      // required int32 originator = 2;
       private int originator_ ;
       /**
        * <code>required int32 originator = 2;</code>
@@ -13340,7 +13297,6 @@ public final class App {
         return this;
       }
 
-      // optional string tag = 3;
       private java.lang.Object tag_ = "";
       /**
        * <code>optional string tag = 3;</code>
@@ -13354,9 +13310,12 @@ public final class App {
       public java.lang.String getTag() {
         java.lang.Object ref = tag_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          tag_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            tag_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -13414,7 +13373,6 @@ public final class App {
         return this;
       }
 
-      // optional int64 time = 4;
       private long time_ ;
       /**
        * <code>optional int64 time = 4;</code>
@@ -13447,7 +13405,6 @@ public final class App {
         return this;
       }
 
-      // optional .PokeStatus reply_code = 5;
       private com.sjsu.cmpe.netty_chat.App.PokeStatus replyCode_ = com.sjsu.cmpe.netty_chat.App.PokeStatus.UKNOWN;
       /**
        * <code>optional .PokeStatus reply_code = 5;</code>
@@ -13483,7 +13440,6 @@ public final class App {
         return this;
       }
 
-      // optional string reply_msg = 6;
       private java.lang.Object replyMsg_ = "";
       /**
        * <code>optional string reply_msg = 6;</code>
@@ -13497,9 +13453,12 @@ public final class App {
       public java.lang.String getReplyMsg() {
         java.lang.Object ref = replyMsg_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          replyMsg_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            replyMsg_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -13557,7 +13516,6 @@ public final class App {
         return this;
       }
 
-      // repeated .RoutingPath path = 7;
       private java.util.List<com.sjsu.cmpe.netty_chat.App.RoutingPath> path_ =
         java.util.Collections.emptyList();
       private void ensurePathIsMutable() {
@@ -13739,7 +13697,8 @@ public final class App {
           java.lang.Iterable<? extends com.sjsu.cmpe.netty_chat.App.RoutingPath> values) {
         if (pathBuilder_ == null) {
           ensurePathIsMutable();
-          super.addAll(values, path_);
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, path_);
           onChanged();
         } else {
           pathBuilder_.addAllMessages(values);
@@ -13869,7 +13828,6 @@ public final class App {
         return pathBuilder_;
       }
 
-      // optional int32 toNode = 8;
       private int toNode_ ;
       /**
        * <code>optional int32 toNode = 8;</code>
@@ -13918,7 +13876,6 @@ public final class App {
         return this;
       }
 
-      // repeated .NameValueSet options = 9;
       private java.util.List<com.sjsu.cmpe.netty_chat.App.NameValueSet> options_ =
         java.util.Collections.emptyList();
       private void ensureOptionsIsMutable() {
@@ -14100,7 +14057,8 @@ public final class App {
           java.lang.Iterable<? extends com.sjsu.cmpe.netty_chat.App.NameValueSet> values) {
         if (optionsBuilder_ == null) {
           ensureOptionsIsMutable();
-          super.addAll(values, options_);
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, options_);
           onChanged();
         } else {
           optionsBuilder_.addAllMessages(values);
@@ -14241,10 +14199,10 @@ public final class App {
     // @@protoc_insertion_point(class_scope:Header)
   }
 
-  public interface PayloadOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
+  public interface PayloadOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Payload)
+      com.google.protobuf.MessageOrBuilder {
 
-    // optional .Ping ping = 1;
     /**
      * <code>optional .Ping ping = 1;</code>
      *
@@ -14270,7 +14228,6 @@ public final class App {
      */
     com.sjsu.cmpe.netty_chat.App.PingOrBuilder getPingOrBuilder();
 
-    // optional .NameSpaceOperation space_op = 2;
     /**
      * <code>optional .NameSpaceOperation space_op = 2;</code>
      *
@@ -14296,7 +14253,6 @@ public final class App {
      */
     com.sjsu.cmpe.netty_chat.App.NameSpaceOperationOrBuilder getSpaceOpOrBuilder();
 
-    // optional .JobOperation job_op = 3;
     /**
      * <code>optional .JobOperation job_op = 3;</code>
      */
@@ -14310,7 +14266,6 @@ public final class App {
      */
     com.sjsu.cmpe.netty_chat.App.JobOperationOrBuilder getJobOpOrBuilder();
 
-    // optional .JobStatus job_status = 13;
     /**
      * <code>optional .JobStatus job_status = 13;</code>
      *
@@ -14336,7 +14291,6 @@ public final class App {
      */
     com.sjsu.cmpe.netty_chat.App.JobStatusOrBuilder getJobStatusOrBuilder();
 
-    // optional .NameSpaceStatus space_status = 12;
     /**
      * <code>optional .NameSpaceStatus space_status = 12;</code>
      */
@@ -14359,8 +14313,9 @@ public final class App {
    * </pre>
    */
   public static final class Payload extends
-      com.google.protobuf.GeneratedMessage
-      implements PayloadOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:Payload)
+      PayloadOrBuilder {
     // Use Payload.newBuilder() to construct.
     private Payload(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
@@ -14511,7 +14466,6 @@ public final class App {
     }
 
     private int bitField0_;
-    // optional .Ping ping = 1;
     public static final int PING_FIELD_NUMBER = 1;
     private com.sjsu.cmpe.netty_chat.App.Ping ping_;
     /**
@@ -14545,7 +14499,6 @@ public final class App {
       return ping_;
     }
 
-    // optional .NameSpaceOperation space_op = 2;
     public static final int SPACE_OP_FIELD_NUMBER = 2;
     private com.sjsu.cmpe.netty_chat.App.NameSpaceOperation spaceOp_;
     /**
@@ -14579,7 +14532,6 @@ public final class App {
       return spaceOp_;
     }
 
-    // optional .JobOperation job_op = 3;
     public static final int JOB_OP_FIELD_NUMBER = 3;
     private com.sjsu.cmpe.netty_chat.App.JobOperation jobOp_;
     /**
@@ -14601,7 +14553,6 @@ public final class App {
       return jobOp_;
     }
 
-    // optional .JobStatus job_status = 13;
     public static final int JOB_STATUS_FIELD_NUMBER = 13;
     private com.sjsu.cmpe.netty_chat.App.JobStatus jobStatus_;
     /**
@@ -14635,7 +14586,6 @@ public final class App {
       return jobStatus_;
     }
 
-    // optional .NameSpaceStatus space_status = 12;
     public static final int SPACE_STATUS_FIELD_NUMBER = 12;
     private com.sjsu.cmpe.netty_chat.App.NameSpaceStatus spaceStatus_;
     /**
@@ -14667,7 +14617,8 @@ public final class App {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
 
       if (hasPing()) {
         if (!getPing().isInitialized()) {
@@ -14837,8 +14788,9 @@ public final class App {
      * </pre>
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements com.sjsu.cmpe.netty_chat.App.PayloadOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:Payload)
+        com.sjsu.cmpe.netty_chat.App.PayloadOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return com.sjsu.cmpe.netty_chat.App.internal_static_Payload_descriptor;
@@ -15062,7 +15014,6 @@ public final class App {
       }
       private int bitField0_;
 
-      // optional .Ping ping = 1;
       private com.sjsu.cmpe.netty_chat.App.Ping ping_ = com.sjsu.cmpe.netty_chat.App.Ping.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           com.sjsu.cmpe.netty_chat.App.Ping, com.sjsu.cmpe.netty_chat.App.Ping.Builder, com.sjsu.cmpe.netty_chat.App.PingOrBuilder> pingBuilder_;
@@ -15207,7 +15158,7 @@ public final class App {
         if (pingBuilder_ == null) {
           pingBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               com.sjsu.cmpe.netty_chat.App.Ping, com.sjsu.cmpe.netty_chat.App.Ping.Builder, com.sjsu.cmpe.netty_chat.App.PingOrBuilder>(
-                  ping_,
+                  getPing(),
                   getParentForChildren(),
                   isClean());
           ping_ = null;
@@ -15215,7 +15166,6 @@ public final class App {
         return pingBuilder_;
       }
 
-      // optional .NameSpaceOperation space_op = 2;
       private com.sjsu.cmpe.netty_chat.App.NameSpaceOperation spaceOp_ = com.sjsu.cmpe.netty_chat.App.NameSpaceOperation.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           com.sjsu.cmpe.netty_chat.App.NameSpaceOperation, com.sjsu.cmpe.netty_chat.App.NameSpaceOperation.Builder, com.sjsu.cmpe.netty_chat.App.NameSpaceOperationOrBuilder> spaceOpBuilder_;
@@ -15360,7 +15310,7 @@ public final class App {
         if (spaceOpBuilder_ == null) {
           spaceOpBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               com.sjsu.cmpe.netty_chat.App.NameSpaceOperation, com.sjsu.cmpe.netty_chat.App.NameSpaceOperation.Builder, com.sjsu.cmpe.netty_chat.App.NameSpaceOperationOrBuilder>(
-                  spaceOp_,
+                  getSpaceOp(),
                   getParentForChildren(),
                   isClean());
           spaceOp_ = null;
@@ -15368,7 +15318,6 @@ public final class App {
         return spaceOpBuilder_;
       }
 
-      // optional .JobOperation job_op = 3;
       private com.sjsu.cmpe.netty_chat.App.JobOperation jobOp_ = com.sjsu.cmpe.netty_chat.App.JobOperation.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           com.sjsu.cmpe.netty_chat.App.JobOperation, com.sjsu.cmpe.netty_chat.App.JobOperation.Builder, com.sjsu.cmpe.netty_chat.App.JobOperationOrBuilder> jobOpBuilder_;
@@ -15477,7 +15426,7 @@ public final class App {
         if (jobOpBuilder_ == null) {
           jobOpBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               com.sjsu.cmpe.netty_chat.App.JobOperation, com.sjsu.cmpe.netty_chat.App.JobOperation.Builder, com.sjsu.cmpe.netty_chat.App.JobOperationOrBuilder>(
-                  jobOp_,
+                  getJobOp(),
                   getParentForChildren(),
                   isClean());
           jobOp_ = null;
@@ -15485,7 +15434,6 @@ public final class App {
         return jobOpBuilder_;
       }
 
-      // optional .JobStatus job_status = 13;
       private com.sjsu.cmpe.netty_chat.App.JobStatus jobStatus_ = com.sjsu.cmpe.netty_chat.App.JobStatus.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           com.sjsu.cmpe.netty_chat.App.JobStatus, com.sjsu.cmpe.netty_chat.App.JobStatus.Builder, com.sjsu.cmpe.netty_chat.App.JobStatusOrBuilder> jobStatusBuilder_;
@@ -15630,7 +15578,7 @@ public final class App {
         if (jobStatusBuilder_ == null) {
           jobStatusBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               com.sjsu.cmpe.netty_chat.App.JobStatus, com.sjsu.cmpe.netty_chat.App.JobStatus.Builder, com.sjsu.cmpe.netty_chat.App.JobStatusOrBuilder>(
-                  jobStatus_,
+                  getJobStatus(),
                   getParentForChildren(),
                   isClean());
           jobStatus_ = null;
@@ -15638,7 +15586,6 @@ public final class App {
         return jobStatusBuilder_;
       }
 
-      // optional .NameSpaceStatus space_status = 12;
       private com.sjsu.cmpe.netty_chat.App.NameSpaceStatus spaceStatus_ = com.sjsu.cmpe.netty_chat.App.NameSpaceStatus.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           com.sjsu.cmpe.netty_chat.App.NameSpaceStatus, com.sjsu.cmpe.netty_chat.App.NameSpaceStatus.Builder, com.sjsu.cmpe.netty_chat.App.NameSpaceStatusOrBuilder> spaceStatusBuilder_;
@@ -15747,7 +15694,7 @@ public final class App {
         if (spaceStatusBuilder_ == null) {
           spaceStatusBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               com.sjsu.cmpe.netty_chat.App.NameSpaceStatus, com.sjsu.cmpe.netty_chat.App.NameSpaceStatus.Builder, com.sjsu.cmpe.netty_chat.App.NameSpaceStatusOrBuilder>(
-                  spaceStatus_,
+                  getSpaceStatus(),
                   getParentForChildren(),
                   isClean());
           spaceStatus_ = null;
@@ -15766,10 +15713,10 @@ public final class App {
     // @@protoc_insertion_point(class_scope:Payload)
   }
 
-  public interface RequestOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
+  public interface RequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Request)
+      com.google.protobuf.MessageOrBuilder {
 
-    // required .Header header = 1;
     /**
      * <code>required .Header header = 1;</code>
      */
@@ -15783,7 +15730,6 @@ public final class App {
      */
     com.sjsu.cmpe.netty_chat.App.HeaderOrBuilder getHeaderOrBuilder();
 
-    // required .Payload body = 2;
     /**
      * <code>required .Payload body = 2;</code>
      */
@@ -15797,7 +15743,6 @@ public final class App {
      */
     com.sjsu.cmpe.netty_chat.App.PayloadOrBuilder getBodyOrBuilder();
 
-    // optional bytes data = 3;
     /**
      * <code>optional bytes data = 3;</code>
      */
@@ -15811,8 +15756,9 @@ public final class App {
    * Protobuf type {@code Request}
    */
   public static final class Request extends
-      com.google.protobuf.GeneratedMessage
-      implements RequestOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:Request)
+      RequestOrBuilder {
     // Use Request.newBuilder() to construct.
     private Request(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
@@ -15929,7 +15875,6 @@ public final class App {
     }
 
     private int bitField0_;
-    // required .Header header = 1;
     public static final int HEADER_FIELD_NUMBER = 1;
     private com.sjsu.cmpe.netty_chat.App.Header header_;
     /**
@@ -15951,7 +15896,6 @@ public final class App {
       return header_;
     }
 
-    // required .Payload body = 2;
     public static final int BODY_FIELD_NUMBER = 2;
     private com.sjsu.cmpe.netty_chat.App.Payload body_;
     /**
@@ -15973,7 +15917,6 @@ public final class App {
       return body_;
     }
 
-    // optional bytes data = 3;
     public static final int DATA_FIELD_NUMBER = 3;
     private com.google.protobuf.ByteString data_;
     /**
@@ -15997,7 +15940,8 @@ public final class App {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
 
       if (!hasHeader()) {
         memoizedIsInitialized = 0;
@@ -16134,8 +16078,9 @@ public final class App {
      * Protobuf type {@code Request}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements com.sjsu.cmpe.netty_chat.App.RequestOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:Request)
+        com.sjsu.cmpe.netty_chat.App.RequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return com.sjsu.cmpe.netty_chat.App.internal_static_Request_descriptor;
@@ -16300,7 +16245,6 @@ public final class App {
       }
       private int bitField0_;
 
-      // required .Header header = 1;
       private com.sjsu.cmpe.netty_chat.App.Header header_ = com.sjsu.cmpe.netty_chat.App.Header.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           com.sjsu.cmpe.netty_chat.App.Header, com.sjsu.cmpe.netty_chat.App.Header.Builder, com.sjsu.cmpe.netty_chat.App.HeaderOrBuilder> headerBuilder_;
@@ -16409,7 +16353,7 @@ public final class App {
         if (headerBuilder_ == null) {
           headerBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               com.sjsu.cmpe.netty_chat.App.Header, com.sjsu.cmpe.netty_chat.App.Header.Builder, com.sjsu.cmpe.netty_chat.App.HeaderOrBuilder>(
-                  header_,
+                  getHeader(),
                   getParentForChildren(),
                   isClean());
           header_ = null;
@@ -16417,7 +16361,6 @@ public final class App {
         return headerBuilder_;
       }
 
-      // required .Payload body = 2;
       private com.sjsu.cmpe.netty_chat.App.Payload body_ = com.sjsu.cmpe.netty_chat.App.Payload.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           com.sjsu.cmpe.netty_chat.App.Payload, com.sjsu.cmpe.netty_chat.App.Payload.Builder, com.sjsu.cmpe.netty_chat.App.PayloadOrBuilder> bodyBuilder_;
@@ -16526,7 +16469,7 @@ public final class App {
         if (bodyBuilder_ == null) {
           bodyBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               com.sjsu.cmpe.netty_chat.App.Payload, com.sjsu.cmpe.netty_chat.App.Payload.Builder, com.sjsu.cmpe.netty_chat.App.PayloadOrBuilder>(
-                  body_,
+                  getBody(),
                   getParentForChildren(),
                   isClean());
           body_ = null;
@@ -16534,7 +16477,6 @@ public final class App {
         return bodyBuilder_;
       }
 
-      // optional bytes data = 3;
       private com.google.protobuf.ByteString data_ = com.google.protobuf.ByteString.EMPTY;
       /**
        * <code>optional bytes data = 3;</code>
@@ -16581,72 +16523,72 @@ public final class App {
     // @@protoc_insertion_point(class_scope:Request)
   }
 
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_NameValueSet_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_NameValueSet_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_NameSpace_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_NameSpace_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_JobDesc_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_JobDesc_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_Ping_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_Ping_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_NameSpaceOperation_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_NameSpaceOperation_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_NameSpaceStatus_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_NameSpaceStatus_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_JobOperation_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_JobOperation_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_JobProposal_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_JobProposal_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_JobBid_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_JobBid_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_JobStatus_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_JobStatus_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_RoutingPath_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_RoutingPath_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_Header_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_Header_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_Payload_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_Payload_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_Request_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
@@ -16720,101 +16662,101 @@ public final class App {
       "_chatH\001"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-      new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
-        public com.google.protobuf.ExtensionRegistry assignDescriptors(
-            com.google.protobuf.Descriptors.FileDescriptor root) {
-          descriptor = root;
-          internal_static_NameValueSet_descriptor =
-            getDescriptor().getMessageTypes().get(0);
-          internal_static_NameValueSet_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_NameValueSet_descriptor,
-              new java.lang.String[] { "NodeType", "Name", "Value", "Node", });
-          internal_static_NameSpace_descriptor =
-            getDescriptor().getMessageTypes().get(1);
-          internal_static_NameSpace_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_NameSpace_descriptor,
-              new java.lang.String[] { "NsId", "Name", "Desc", "Created", "LastModified", "Owner", "Properties", });
-          internal_static_JobDesc_descriptor =
-            getDescriptor().getMessageTypes().get(2);
-          internal_static_JobDesc_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_JobDesc_descriptor,
-              new java.lang.String[] { "NameSpace", "OwnerId", "JobId", "Status", "Options", });
-          internal_static_Ping_descriptor =
-            getDescriptor().getMessageTypes().get(3);
-          internal_static_Ping_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_Ping_descriptor,
-              new java.lang.String[] { "Number", "Tag", });
-          internal_static_NameSpaceOperation_descriptor =
-            getDescriptor().getMessageTypes().get(4);
-          internal_static_NameSpaceOperation_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_NameSpaceOperation_descriptor,
-              new java.lang.String[] { "Action", "NsId", "Data", "Options", });
-          internal_static_NameSpaceStatus_descriptor =
-            getDescriptor().getMessageTypes().get(5);
-          internal_static_NameSpaceStatus_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_NameSpaceStatus_descriptor,
-              new java.lang.String[] { "Status", "Data", });
-          internal_static_JobOperation_descriptor =
-            getDescriptor().getMessageTypes().get(6);
-          internal_static_JobOperation_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_JobOperation_descriptor,
-              new java.lang.String[] { "Action", "JobId", "Data", "JobPropose", "JobBid", });
-          internal_static_JobProposal_descriptor =
-            getDescriptor().getMessageTypes().get(7);
-          internal_static_JobProposal_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_JobProposal_descriptor,
-              new java.lang.String[] { "NameSpace", "OwnerId", "JobId", "Weight", "Options", "AuthorizationCode", });
-          internal_static_JobBid_descriptor =
-            getDescriptor().getMessageTypes().get(8);
-          internal_static_JobBid_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_JobBid_descriptor,
-              new java.lang.String[] { "NameSpace", "OwnerId", "JobId", "Bid", "SecurityCode", });
-          internal_static_JobStatus_descriptor =
-            getDescriptor().getMessageTypes().get(9);
-          internal_static_JobStatus_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_JobStatus_descriptor,
-              new java.lang.String[] { "JobId", "Status", "JobState", "Data", });
-          internal_static_RoutingPath_descriptor =
-            getDescriptor().getMessageTypes().get(10);
-          internal_static_RoutingPath_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_RoutingPath_descriptor,
-              new java.lang.String[] { "NodeId", "Time", });
-          internal_static_Header_descriptor =
-            getDescriptor().getMessageTypes().get(11);
-          internal_static_Header_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_Header_descriptor,
-              new java.lang.String[] { "RoutingId", "Originator", "Tag", "Time", "ReplyCode", "ReplyMsg", "Path", "ToNode", "Options", });
-          internal_static_Payload_descriptor =
-            getDescriptor().getMessageTypes().get(12);
-          internal_static_Payload_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_Payload_descriptor,
-              new java.lang.String[] { "Ping", "SpaceOp", "JobOp", "JobStatus", "SpaceStatus", });
-          internal_static_Request_descriptor =
-            getDescriptor().getMessageTypes().get(13);
-          internal_static_Request_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_Request_descriptor,
-              new java.lang.String[] { "Header", "Body", "Data", });
-          return null;
-        }
-      };
+        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
+          public com.google.protobuf.ExtensionRegistry assignDescriptors(
+              com.google.protobuf.Descriptors.FileDescriptor root) {
+            descriptor = root;
+            return null;
+          }
+        };
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
         }, assigner);
+    internal_static_NameValueSet_descriptor =
+      getDescriptor().getMessageTypes().get(0);
+    internal_static_NameValueSet_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_NameValueSet_descriptor,
+        new java.lang.String[] { "NodeType", "Name", "Value", "Node", });
+    internal_static_NameSpace_descriptor =
+      getDescriptor().getMessageTypes().get(1);
+    internal_static_NameSpace_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_NameSpace_descriptor,
+        new java.lang.String[] { "NsId", "Name", "Desc", "Created", "LastModified", "Owner", "Properties", });
+    internal_static_JobDesc_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_JobDesc_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_JobDesc_descriptor,
+        new java.lang.String[] { "NameSpace", "OwnerId", "JobId", "Status", "Options", });
+    internal_static_Ping_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_Ping_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_Ping_descriptor,
+        new java.lang.String[] { "Number", "Tag", });
+    internal_static_NameSpaceOperation_descriptor =
+      getDescriptor().getMessageTypes().get(4);
+    internal_static_NameSpaceOperation_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_NameSpaceOperation_descriptor,
+        new java.lang.String[] { "Action", "NsId", "Data", "Options", });
+    internal_static_NameSpaceStatus_descriptor =
+      getDescriptor().getMessageTypes().get(5);
+    internal_static_NameSpaceStatus_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_NameSpaceStatus_descriptor,
+        new java.lang.String[] { "Status", "Data", });
+    internal_static_JobOperation_descriptor =
+      getDescriptor().getMessageTypes().get(6);
+    internal_static_JobOperation_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_JobOperation_descriptor,
+        new java.lang.String[] { "Action", "JobId", "Data", "JobPropose", "JobBid", });
+    internal_static_JobProposal_descriptor =
+      getDescriptor().getMessageTypes().get(7);
+    internal_static_JobProposal_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_JobProposal_descriptor,
+        new java.lang.String[] { "NameSpace", "OwnerId", "JobId", "Weight", "Options", "AuthorizationCode", });
+    internal_static_JobBid_descriptor =
+      getDescriptor().getMessageTypes().get(8);
+    internal_static_JobBid_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_JobBid_descriptor,
+        new java.lang.String[] { "NameSpace", "OwnerId", "JobId", "Bid", "SecurityCode", });
+    internal_static_JobStatus_descriptor =
+      getDescriptor().getMessageTypes().get(9);
+    internal_static_JobStatus_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_JobStatus_descriptor,
+        new java.lang.String[] { "JobId", "Status", "JobState", "Data", });
+    internal_static_RoutingPath_descriptor =
+      getDescriptor().getMessageTypes().get(10);
+    internal_static_RoutingPath_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_RoutingPath_descriptor,
+        new java.lang.String[] { "NodeId", "Time", });
+    internal_static_Header_descriptor =
+      getDescriptor().getMessageTypes().get(11);
+    internal_static_Header_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_Header_descriptor,
+        new java.lang.String[] { "RoutingId", "Originator", "Tag", "Time", "ReplyCode", "ReplyMsg", "Path", "ToNode", "Options", });
+    internal_static_Payload_descriptor =
+      getDescriptor().getMessageTypes().get(12);
+    internal_static_Payload_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_Payload_descriptor,
+        new java.lang.String[] { "Ping", "SpaceOp", "JobOp", "JobStatus", "SpaceStatus", });
+    internal_static_Request_descriptor =
+      getDescriptor().getMessageTypes().get(13);
+    internal_static_Request_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_Request_descriptor,
+        new java.lang.String[] { "Header", "Body", "Data", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

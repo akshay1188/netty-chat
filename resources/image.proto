@@ -1,6 +1,6 @@
 
 option optimize_for = SPEED;
-option java_package = "poke.core";
+option java_package = "com.sjsu.cmpe.netty_chat";
 
 message Header {
          optional string md5 = 1;
@@ -12,6 +12,9 @@ message Header {
 
 message PayLoad {
          required bytes data = 1; // Image format should be PNG
+         optional int32 img_id = 2; // To identify image uniquely
+		 optional int32 chunk_id = 3; //To identify chunk of a image uniquely
+		 optional int32 total_chunks = 4;//Total no of chunks
 }
 
 message Ping{

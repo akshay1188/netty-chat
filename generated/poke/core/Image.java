@@ -8,10 +8,10 @@ public final class Image {
   public static void registerAllExtensions(
       com.google.protobuf.ExtensionRegistry registry) {
   }
-  public interface HeaderOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
+  public interface HeaderOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Header)
+      com.google.protobuf.MessageOrBuilder {
 
-    // optional string md5 = 1;
     /**
      * <code>optional string md5 = 1;</code>
      */
@@ -26,7 +26,6 @@ public final class Image {
     com.google.protobuf.ByteString
         getMd5Bytes();
 
-    // required int32 client_id = 2;
     /**
      * <code>required int32 client_id = 2;</code>
      */
@@ -36,7 +35,6 @@ public final class Image {
      */
     int getClientId();
 
-    // required int32 cluster_id = 3;
     /**
      * <code>required int32 cluster_id = 3;</code>
      */
@@ -46,7 +44,6 @@ public final class Image {
      */
     int getClusterId();
 
-    // required bool is_client = 4;
     /**
      * <code>required bool is_client = 4;</code>
      */
@@ -56,7 +53,6 @@ public final class Image {
      */
     boolean getIsClient();
 
-    // required string caption = 5;
     /**
      * <code>required string caption = 5;</code>
      *
@@ -87,8 +83,9 @@ public final class Image {
    * Protobuf type {@code Header}
    */
   public static final class Header extends
-      com.google.protobuf.GeneratedMessage
-      implements HeaderOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:Header)
+      HeaderOrBuilder {
     // Use Header.newBuilder() to construct.
     private Header(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
@@ -135,8 +132,9 @@ public final class Image {
               break;
             }
             case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000001;
-              md5_ = input.readBytes();
+              md5_ = bs;
               break;
             }
             case 16: {
@@ -155,8 +153,9 @@ public final class Image {
               break;
             }
             case 42: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000010;
-              caption_ = input.readBytes();
+              caption_ = bs;
               break;
             }
           }
@@ -199,7 +198,6 @@ public final class Image {
     }
 
     private int bitField0_;
-    // optional string md5 = 1;
     public static final int MD5_FIELD_NUMBER = 1;
     private java.lang.Object md5_;
     /**
@@ -242,7 +240,6 @@ public final class Image {
       }
     }
 
-    // required int32 client_id = 2;
     public static final int CLIENT_ID_FIELD_NUMBER = 2;
     private int clientId_;
     /**
@@ -258,7 +255,6 @@ public final class Image {
       return clientId_;
     }
 
-    // required int32 cluster_id = 3;
     public static final int CLUSTER_ID_FIELD_NUMBER = 3;
     private int clusterId_;
     /**
@@ -274,7 +270,6 @@ public final class Image {
       return clusterId_;
     }
 
-    // required bool is_client = 4;
     public static final int IS_CLIENT_FIELD_NUMBER = 4;
     private boolean isClient_;
     /**
@@ -290,7 +285,6 @@ public final class Image {
       return isClient_;
     }
 
-    // required string caption = 5;
     public static final int CAPTION_FIELD_NUMBER = 5;
     private java.lang.Object caption_;
     /**
@@ -355,7 +349,8 @@ public final class Image {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
 
       if (!hasClientId()) {
         memoizedIsInitialized = 0;
@@ -506,8 +501,9 @@ public final class Image {
      * Protobuf type {@code Header}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements poke.core.Image.HeaderOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:Header)
+        poke.core.Image.HeaderOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return poke.core.Image.internal_static_Header_descriptor;
@@ -676,7 +672,6 @@ public final class Image {
       }
       private int bitField0_;
 
-      // optional string md5 = 1;
       private java.lang.Object md5_ = "";
       /**
        * <code>optional string md5 = 1;</code>
@@ -690,9 +685,12 @@ public final class Image {
       public java.lang.String getMd5() {
         java.lang.Object ref = md5_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          md5_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            md5_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -750,7 +748,6 @@ public final class Image {
         return this;
       }
 
-      // required int32 client_id = 2;
       private int clientId_ ;
       /**
        * <code>required int32 client_id = 2;</code>
@@ -783,7 +780,6 @@ public final class Image {
         return this;
       }
 
-      // required int32 cluster_id = 3;
       private int clusterId_ ;
       /**
        * <code>required int32 cluster_id = 3;</code>
@@ -816,7 +812,6 @@ public final class Image {
         return this;
       }
 
-      // required bool is_client = 4;
       private boolean isClient_ ;
       /**
        * <code>required bool is_client = 4;</code>
@@ -849,7 +844,6 @@ public final class Image {
         return this;
       }
 
-      // required string caption = 5;
       private java.lang.Object caption_ = "";
       /**
        * <code>required string caption = 5;</code>
@@ -871,9 +865,12 @@ public final class Image {
       public java.lang.String getCaption() {
         java.lang.Object ref = caption_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          caption_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            caption_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -958,10 +955,10 @@ public final class Image {
     // @@protoc_insertion_point(class_scope:Header)
   }
 
-  public interface PayLoadOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
+  public interface PayLoadOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:PayLoad)
+      com.google.protobuf.MessageOrBuilder {
 
-    // required bytes data = 1;
     /**
      * <code>required bytes data = 1;</code>
      *
@@ -978,13 +975,65 @@ public final class Image {
      * </pre>
      */
     com.google.protobuf.ByteString getData();
+
+    /**
+     * <code>optional int32 img_id = 2;</code>
+     *
+     * <pre>
+     * To identify image uniquely
+     * </pre>
+     */
+    boolean hasImgId();
+    /**
+     * <code>optional int32 img_id = 2;</code>
+     *
+     * <pre>
+     * To identify image uniquely
+     * </pre>
+     */
+    int getImgId();
+
+    /**
+     * <code>optional int32 chunk_id = 3;</code>
+     *
+     * <pre>
+     *To identify chunk of a image uniquely
+     * </pre>
+     */
+    boolean hasChunkId();
+    /**
+     * <code>optional int32 chunk_id = 3;</code>
+     *
+     * <pre>
+     *To identify chunk of a image uniquely
+     * </pre>
+     */
+    int getChunkId();
+
+    /**
+     * <code>optional int32 total_chunks = 4;</code>
+     *
+     * <pre>
+     *Total no of chunks
+     * </pre>
+     */
+    boolean hasTotalChunks();
+    /**
+     * <code>optional int32 total_chunks = 4;</code>
+     *
+     * <pre>
+     *Total no of chunks
+     * </pre>
+     */
+    int getTotalChunks();
   }
   /**
    * Protobuf type {@code PayLoad}
    */
   public static final class PayLoad extends
-      com.google.protobuf.GeneratedMessage
-      implements PayLoadOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:PayLoad)
+      PayLoadOrBuilder {
     // Use PayLoad.newBuilder() to construct.
     private PayLoad(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
@@ -1035,6 +1084,21 @@ public final class Image {
               data_ = input.readBytes();
               break;
             }
+            case 16: {
+              bitField0_ |= 0x00000002;
+              imgId_ = input.readInt32();
+              break;
+            }
+            case 24: {
+              bitField0_ |= 0x00000004;
+              chunkId_ = input.readInt32();
+              break;
+            }
+            case 32: {
+              bitField0_ |= 0x00000008;
+              totalChunks_ = input.readInt32();
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -1075,7 +1139,6 @@ public final class Image {
     }
 
     private int bitField0_;
-    // required bytes data = 1;
     public static final int DATA_FIELD_NUMBER = 1;
     private com.google.protobuf.ByteString data_;
     /**
@@ -1099,13 +1162,86 @@ public final class Image {
       return data_;
     }
 
+    public static final int IMG_ID_FIELD_NUMBER = 2;
+    private int imgId_;
+    /**
+     * <code>optional int32 img_id = 2;</code>
+     *
+     * <pre>
+     * To identify image uniquely
+     * </pre>
+     */
+    public boolean hasImgId() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>optional int32 img_id = 2;</code>
+     *
+     * <pre>
+     * To identify image uniquely
+     * </pre>
+     */
+    public int getImgId() {
+      return imgId_;
+    }
+
+    public static final int CHUNK_ID_FIELD_NUMBER = 3;
+    private int chunkId_;
+    /**
+     * <code>optional int32 chunk_id = 3;</code>
+     *
+     * <pre>
+     *To identify chunk of a image uniquely
+     * </pre>
+     */
+    public boolean hasChunkId() {
+      return ((bitField0_ & 0x00000004) == 0x00000004);
+    }
+    /**
+     * <code>optional int32 chunk_id = 3;</code>
+     *
+     * <pre>
+     *To identify chunk of a image uniquely
+     * </pre>
+     */
+    public int getChunkId() {
+      return chunkId_;
+    }
+
+    public static final int TOTAL_CHUNKS_FIELD_NUMBER = 4;
+    private int totalChunks_;
+    /**
+     * <code>optional int32 total_chunks = 4;</code>
+     *
+     * <pre>
+     *Total no of chunks
+     * </pre>
+     */
+    public boolean hasTotalChunks() {
+      return ((bitField0_ & 0x00000008) == 0x00000008);
+    }
+    /**
+     * <code>optional int32 total_chunks = 4;</code>
+     *
+     * <pre>
+     *Total no of chunks
+     * </pre>
+     */
+    public int getTotalChunks() {
+      return totalChunks_;
+    }
+
     private void initFields() {
       data_ = com.google.protobuf.ByteString.EMPTY;
+      imgId_ = 0;
+      chunkId_ = 0;
+      totalChunks_ = 0;
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
 
       if (!hasData()) {
         memoizedIsInitialized = 0;
@@ -1121,6 +1257,15 @@ public final class Image {
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         output.writeBytes(1, data_);
       }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeInt32(2, imgId_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        output.writeInt32(3, chunkId_);
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        output.writeInt32(4, totalChunks_);
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -1133,6 +1278,18 @@ public final class Image {
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(1, data_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(2, imgId_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(3, chunkId_);
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(4, totalChunks_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -1216,8 +1373,9 @@ public final class Image {
      * Protobuf type {@code PayLoad}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements poke.core.Image.PayLoadOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:PayLoad)
+        poke.core.Image.PayLoadOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return poke.core.Image.internal_static_PayLoad_descriptor;
@@ -1252,6 +1410,12 @@ public final class Image {
         super.clear();
         data_ = com.google.protobuf.ByteString.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000001);
+        imgId_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        chunkId_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        totalChunks_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000008);
         return this;
       }
 
@@ -1284,6 +1448,18 @@ public final class Image {
           to_bitField0_ |= 0x00000001;
         }
         result.data_ = data_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.imgId_ = imgId_;
+        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        result.chunkId_ = chunkId_;
+        if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
+          to_bitField0_ |= 0x00000008;
+        }
+        result.totalChunks_ = totalChunks_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -1302,6 +1478,15 @@ public final class Image {
         if (other == poke.core.Image.PayLoad.getDefaultInstance()) return this;
         if (other.hasData()) {
           setData(other.getData());
+        }
+        if (other.hasImgId()) {
+          setImgId(other.getImgId());
+        }
+        if (other.hasChunkId()) {
+          setChunkId(other.getChunkId());
+        }
+        if (other.hasTotalChunks()) {
+          setTotalChunks(other.getTotalChunks());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -1334,7 +1519,6 @@ public final class Image {
       }
       private int bitField0_;
 
-      // required bytes data = 1;
       private com.google.protobuf.ByteString data_ = com.google.protobuf.ByteString.EMPTY;
       /**
        * <code>required bytes data = 1;</code>
@@ -1386,6 +1570,150 @@ public final class Image {
         return this;
       }
 
+      private int imgId_ ;
+      /**
+       * <code>optional int32 img_id = 2;</code>
+       *
+       * <pre>
+       * To identify image uniquely
+       * </pre>
+       */
+      public boolean hasImgId() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>optional int32 img_id = 2;</code>
+       *
+       * <pre>
+       * To identify image uniquely
+       * </pre>
+       */
+      public int getImgId() {
+        return imgId_;
+      }
+      /**
+       * <code>optional int32 img_id = 2;</code>
+       *
+       * <pre>
+       * To identify image uniquely
+       * </pre>
+       */
+      public Builder setImgId(int value) {
+        bitField0_ |= 0x00000002;
+        imgId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 img_id = 2;</code>
+       *
+       * <pre>
+       * To identify image uniquely
+       * </pre>
+       */
+      public Builder clearImgId() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        imgId_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int chunkId_ ;
+      /**
+       * <code>optional int32 chunk_id = 3;</code>
+       *
+       * <pre>
+       *To identify chunk of a image uniquely
+       * </pre>
+       */
+      public boolean hasChunkId() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>optional int32 chunk_id = 3;</code>
+       *
+       * <pre>
+       *To identify chunk of a image uniquely
+       * </pre>
+       */
+      public int getChunkId() {
+        return chunkId_;
+      }
+      /**
+       * <code>optional int32 chunk_id = 3;</code>
+       *
+       * <pre>
+       *To identify chunk of a image uniquely
+       * </pre>
+       */
+      public Builder setChunkId(int value) {
+        bitField0_ |= 0x00000004;
+        chunkId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 chunk_id = 3;</code>
+       *
+       * <pre>
+       *To identify chunk of a image uniquely
+       * </pre>
+       */
+      public Builder clearChunkId() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        chunkId_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int totalChunks_ ;
+      /**
+       * <code>optional int32 total_chunks = 4;</code>
+       *
+       * <pre>
+       *Total no of chunks
+       * </pre>
+       */
+      public boolean hasTotalChunks() {
+        return ((bitField0_ & 0x00000008) == 0x00000008);
+      }
+      /**
+       * <code>optional int32 total_chunks = 4;</code>
+       *
+       * <pre>
+       *Total no of chunks
+       * </pre>
+       */
+      public int getTotalChunks() {
+        return totalChunks_;
+      }
+      /**
+       * <code>optional int32 total_chunks = 4;</code>
+       *
+       * <pre>
+       *Total no of chunks
+       * </pre>
+       */
+      public Builder setTotalChunks(int value) {
+        bitField0_ |= 0x00000008;
+        totalChunks_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 total_chunks = 4;</code>
+       *
+       * <pre>
+       *Total no of chunks
+       * </pre>
+       */
+      public Builder clearTotalChunks() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        totalChunks_ = 0;
+        onChanged();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:PayLoad)
     }
 
@@ -1397,10 +1725,10 @@ public final class Image {
     // @@protoc_insertion_point(class_scope:PayLoad)
   }
 
-  public interface PingOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
+  public interface PingOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Ping)
+      com.google.protobuf.MessageOrBuilder {
 
-    // required bool is_ping = 1;
     /**
      * <code>required bool is_ping = 1;</code>
      */
@@ -1414,8 +1742,9 @@ public final class Image {
    * Protobuf type {@code Ping}
    */
   public static final class Ping extends
-      com.google.protobuf.GeneratedMessage
-      implements PingOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:Ping)
+      PingOrBuilder {
     // Use Ping.newBuilder() to construct.
     private Ping(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
@@ -1506,7 +1835,6 @@ public final class Image {
     }
 
     private int bitField0_;
-    // required bool is_ping = 1;
     public static final int IS_PING_FIELD_NUMBER = 1;
     private boolean isPing_;
     /**
@@ -1528,7 +1856,8 @@ public final class Image {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
 
       if (!hasIsPing()) {
         memoizedIsInitialized = 0;
@@ -1639,8 +1968,9 @@ public final class Image {
      * Protobuf type {@code Ping}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements poke.core.Image.PingOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:Ping)
+        poke.core.Image.PingOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return poke.core.Image.internal_static_Ping_descriptor;
@@ -1757,7 +2087,6 @@ public final class Image {
       }
       private int bitField0_;
 
-      // required bool is_ping = 1;
       private boolean isPing_ ;
       /**
        * <code>required bool is_ping = 1;</code>
@@ -1801,10 +2130,10 @@ public final class Image {
     // @@protoc_insertion_point(class_scope:Ping)
   }
 
-  public interface RequestOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
+  public interface RequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Request)
+      com.google.protobuf.MessageOrBuilder {
 
-    // required .Header header = 1;
     /**
      * <code>required .Header header = 1;</code>
      */
@@ -1818,7 +2147,6 @@ public final class Image {
      */
     poke.core.Image.HeaderOrBuilder getHeaderOrBuilder();
 
-    // required .PayLoad payload = 2;
     /**
      * <code>required .PayLoad payload = 2;</code>
      */
@@ -1832,7 +2160,6 @@ public final class Image {
      */
     poke.core.Image.PayLoadOrBuilder getPayloadOrBuilder();
 
-    // required .Ping ping = 3;
     /**
      * <code>required .Ping ping = 3;</code>
      */
@@ -1850,8 +2177,9 @@ public final class Image {
    * Protobuf type {@code Request}
    */
   public static final class Request extends
-      com.google.protobuf.GeneratedMessage
-      implements RequestOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:Request)
+      RequestOrBuilder {
     // Use Request.newBuilder() to construct.
     private Request(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
@@ -1976,7 +2304,6 @@ public final class Image {
     }
 
     private int bitField0_;
-    // required .Header header = 1;
     public static final int HEADER_FIELD_NUMBER = 1;
     private poke.core.Image.Header header_;
     /**
@@ -1998,7 +2325,6 @@ public final class Image {
       return header_;
     }
 
-    // required .PayLoad payload = 2;
     public static final int PAYLOAD_FIELD_NUMBER = 2;
     private poke.core.Image.PayLoad payload_;
     /**
@@ -2020,7 +2346,6 @@ public final class Image {
       return payload_;
     }
 
-    // required .Ping ping = 3;
     public static final int PING_FIELD_NUMBER = 3;
     private poke.core.Image.Ping ping_;
     /**
@@ -2050,7 +2375,8 @@ public final class Image {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
 
       if (!hasHeader()) {
         memoizedIsInitialized = 0;
@@ -2195,8 +2521,9 @@ public final class Image {
      * Protobuf type {@code Request}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements poke.core.Image.RequestOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:Request)
+        poke.core.Image.RequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return poke.core.Image.internal_static_Request_descriptor;
@@ -2378,7 +2705,6 @@ public final class Image {
       }
       private int bitField0_;
 
-      // required .Header header = 1;
       private poke.core.Image.Header header_ = poke.core.Image.Header.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           poke.core.Image.Header, poke.core.Image.Header.Builder, poke.core.Image.HeaderOrBuilder> headerBuilder_;
@@ -2487,7 +2813,7 @@ public final class Image {
         if (headerBuilder_ == null) {
           headerBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               poke.core.Image.Header, poke.core.Image.Header.Builder, poke.core.Image.HeaderOrBuilder>(
-                  header_,
+                  getHeader(),
                   getParentForChildren(),
                   isClean());
           header_ = null;
@@ -2495,7 +2821,6 @@ public final class Image {
         return headerBuilder_;
       }
 
-      // required .PayLoad payload = 2;
       private poke.core.Image.PayLoad payload_ = poke.core.Image.PayLoad.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           poke.core.Image.PayLoad, poke.core.Image.PayLoad.Builder, poke.core.Image.PayLoadOrBuilder> payloadBuilder_;
@@ -2604,7 +2929,7 @@ public final class Image {
         if (payloadBuilder_ == null) {
           payloadBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               poke.core.Image.PayLoad, poke.core.Image.PayLoad.Builder, poke.core.Image.PayLoadOrBuilder>(
-                  payload_,
+                  getPayload(),
                   getParentForChildren(),
                   isClean());
           payload_ = null;
@@ -2612,7 +2937,6 @@ public final class Image {
         return payloadBuilder_;
       }
 
-      // required .Ping ping = 3;
       private poke.core.Image.Ping ping_ = poke.core.Image.Ping.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           poke.core.Image.Ping, poke.core.Image.Ping.Builder, poke.core.Image.PingOrBuilder> pingBuilder_;
@@ -2721,7 +3045,7 @@ public final class Image {
         if (pingBuilder_ == null) {
           pingBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               poke.core.Image.Ping, poke.core.Image.Ping.Builder, poke.core.Image.PingOrBuilder>(
-                  ping_,
+                  getPing(),
                   getParentForChildren(),
                   isClean());
           ping_ = null;
@@ -2740,22 +3064,22 @@ public final class Image {
     // @@protoc_insertion_point(class_scope:Request)
   }
 
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_Header_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_Header_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_PayLoad_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_PayLoad_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_Ping_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_Ping_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_Request_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
@@ -2771,48 +3095,49 @@ public final class Image {
     java.lang.String[] descriptorData = {
       "\n\013image.proto\"`\n\006Header\022\013\n\003md5\030\001 \001(\t\022\021\n\t" +
       "client_id\030\002 \002(\005\022\022\n\ncluster_id\030\003 \002(\005\022\021\n\ti" +
-      "s_client\030\004 \002(\010\022\017\n\007caption\030\005 \002(\t\"\027\n\007PayLo" +
-      "ad\022\014\n\004data\030\001 \002(\014\"\027\n\004Ping\022\017\n\007is_ping\030\001 \002(" +
-      "\010\"R\n\007Request\022\027\n\006header\030\001 \002(\0132\007.Header\022\031\n" +
-      "\007payload\030\002 \002(\0132\010.PayLoad\022\023\n\004ping\030\003 \002(\0132\005" +
-      ".PingB\r\n\tpoke.coreH\001"
+      "s_client\030\004 \002(\010\022\017\n\007caption\030\005 \002(\t\"O\n\007PayLo" +
+      "ad\022\014\n\004data\030\001 \002(\014\022\016\n\006img_id\030\002 \001(\005\022\020\n\010chun" +
+      "k_id\030\003 \001(\005\022\024\n\014total_chunks\030\004 \001(\005\"\027\n\004Ping" +
+      "\022\017\n\007is_ping\030\001 \002(\010\"R\n\007Request\022\027\n\006header\030\001" +
+      " \002(\0132\007.Header\022\031\n\007payload\030\002 \002(\0132\010.PayLoad" +
+      "\022\023\n\004ping\030\003 \002(\0132\005.PingB\r\n\tpoke.coreH\001"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-      new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
-        public com.google.protobuf.ExtensionRegistry assignDescriptors(
-            com.google.protobuf.Descriptors.FileDescriptor root) {
-          descriptor = root;
-          internal_static_Header_descriptor =
-            getDescriptor().getMessageTypes().get(0);
-          internal_static_Header_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_Header_descriptor,
-              new java.lang.String[] { "Md5", "ClientId", "ClusterId", "IsClient", "Caption", });
-          internal_static_PayLoad_descriptor =
-            getDescriptor().getMessageTypes().get(1);
-          internal_static_PayLoad_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_PayLoad_descriptor,
-              new java.lang.String[] { "Data", });
-          internal_static_Ping_descriptor =
-            getDescriptor().getMessageTypes().get(2);
-          internal_static_Ping_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_Ping_descriptor,
-              new java.lang.String[] { "IsPing", });
-          internal_static_Request_descriptor =
-            getDescriptor().getMessageTypes().get(3);
-          internal_static_Request_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_Request_descriptor,
-              new java.lang.String[] { "Header", "Payload", "Ping", });
-          return null;
-        }
-      };
+        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
+          public com.google.protobuf.ExtensionRegistry assignDescriptors(
+              com.google.protobuf.Descriptors.FileDescriptor root) {
+            descriptor = root;
+            return null;
+          }
+        };
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
         }, assigner);
+    internal_static_Header_descriptor =
+      getDescriptor().getMessageTypes().get(0);
+    internal_static_Header_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_Header_descriptor,
+        new java.lang.String[] { "Md5", "ClientId", "ClusterId", "IsClient", "Caption", });
+    internal_static_PayLoad_descriptor =
+      getDescriptor().getMessageTypes().get(1);
+    internal_static_PayLoad_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_PayLoad_descriptor,
+        new java.lang.String[] { "Data", "ImgId", "ChunkId", "TotalChunks", });
+    internal_static_Ping_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_Ping_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_Ping_descriptor,
+        new java.lang.String[] { "IsPing", });
+    internal_static_Request_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_Request_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_Request_descriptor,
+        new java.lang.String[] { "Header", "Payload", "Ping", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)
