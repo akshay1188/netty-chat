@@ -6,24 +6,11 @@ import io.netty.channel.EventLoopGroup;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.nio.NioSocketChannel;
 
-import java.io.BufferedReader;
-import java.io.ByteArrayInputStream;
-import java.io.ByteArrayOutputStream;
 import java.io.File;
-import java.io.InputStreamReader;
-import java.io.ObjectOutputStream;
-import java.io.OutputStream;
-import java.io.ObjectInputStream.GetField;
 import java.nio.file.Files;
-import java.sql.Timestamp;
 import java.util.Arrays;
-import java.util.Date;
 
-import javassist.bytecode.ByteArray;
 
-import com.esotericsoftware.kryo.Kryo;
-import com.esotericsoftware.kryo.io.Input;
-import com.esotericsoftware.kryo.io.Output;
 import com.google.protobuf.ByteString;
 import com.sjsu.cmpe.netty_chat.Image.Header;
 import com.sjsu.cmpe.netty_chat.Image.PayLoad;
@@ -44,7 +31,7 @@ public class ChatClient implements Runnable {
 	private static int clusterId = 9;
 	private String caption;
 	private String path;
-	private final int CHUNK_SIZE = 10000;
+	private final int CHUNK_SIZE = 1000000;//chunk size 1 MB 
 
 	public ChatClient(String host, int port) {
 		this.host = host;
@@ -57,74 +44,16 @@ public class ChatClient implements Runnable {
 
 		try {
 
-			// String str = "test string";
-			//
-			// Kryo kryo = new Kryo();
-			// kryo.register(String.class);
-			//
-			// ByteArrayOutputStream stream = new ByteArrayOutputStream();
-			// Output output = new Output(stream);
-			// kryo.writeObject(output, str);
-			// output.close(); // Also calls output.flush()
-			// byte[] buffer = stream.toByteArray(); // Serialization done, get
-			// bytes
-			//
-			//
-			// System.out.println("test string "+ Arrays.toString(buffer));
-			//
-			// System.out.println("reading "+ kryo.readObject(new Input(new
-			// ByteArrayInputStream(buffer)), String.class));
-
-			// Output op = new Output;
-			// kryo.writeOb
+			//take a sample image from disk
 			File fi = new File(
-					"/Users/akshay/Desktop/e68557dc-2725-420f-8315-6977ef23cdbe.png");
+					"/Users/devendra/Desktop/test_img.png");
+			//convert it into byte array
 			byte[] fileContent = Files.readAllBytes(fi.toPath());
-			System.out.println(Arrays.toString(fileContent));
-			System.out.println("size " + fileContent.length);
 
+			//convert it into chunks of smaller arrays
 			byte[][] res = divideArray(fileContent, CHUNK_SIZE);
-			System.out.println("res size " + res.length);
+			//send the chunks
 			sendChunks(res);
-			/*
-			Bootstrap bootstrap = new Bootstrap().group(group)
-					.channel(NioSocketChannel.class)
-					.handler(new ChatClientInitializer());
-
-			Channel channel = bootstrap.connect(host, port).sync().channel();
-
-			Header.Builder header = Header.newBuilder();
-			header.setClientId(1);
-			header.setClusterId(4);
-			header.setIsClient(true);
-
-			PayLoad.Builder payload = PayLoad.newBuilder();
-			fi = new File(
-					"/Users/akshay/Desktop/e68557dc-2725-420f-8315-6977ef23cdbe.png");
-			fileContent = Files.readAllBytes(fi.toPath());
-			payload.setData(ByteString.copyFrom(fileContent));
-			System.out.println(Arrays.toString(fileContent));
-			System.out.println("size " + fileContent.length);
-			
-			Ping.Builder ping = Ping.newBuilder();
-			ping.setIsPing(false);
-
-			Request.Builder request = Request.newBuilder();
-			request.setPayload(payload);
-			request.setPing(ping);
-
-			for (int i = 0; i < 1; i++) {
-				System.out.println("Please enter caption");
-				caption = "" + i;
-				header.setCaption(caption);
-				System.out.println("Caption enterd is " + caption);
-				request.setHeader(header);
-
-				if (channel.isActive()) {
-					channel.write(request.build());
-					channel.flush();
-				}
-			}*/
 		} catch (Exception e1) {
 			e1.printStackTrace();
 		} finally {
@@ -132,6 +61,7 @@ public class ChatClient implements Runnable {
 		}
 	}
 
+	//this method divides the byte array into chunks
 	public static byte[][] divideArray(byte[] source, int chunksize) {
 
 		byte[][] ret = new byte[(int) Math.ceil(source.length
@@ -147,7 +77,8 @@ public class ChatClient implements Runnable {
 		return ret;
 	}
 	
-	public static void sendChunks(byte[][] chunks){
+	//sending the chunks over the channel
+	public void sendChunks(byte[][] chunks){
 		EventLoopGroup group = new NioEventLoopGroup();
 		
 		Bootstrap bootstrap = new Bootstrap().group(group)
@@ -156,7 +87,7 @@ public class ChatClient implements Runnable {
 
 		Channel channel;
 		try {
-			channel = bootstrap.connect("localhost", 5570).sync().channel();
+			channel = bootstrap.connect(host, port).sync().channel();
 			
 			Header.Builder header = Header.newBuilder();
 			header.setClientId(1);
@@ -178,6 +109,7 @@ public class ChatClient implements Runnable {
 			payload.setImgId((int)System.currentTimeMillis());
 			payload.setTotalChunks(chunks.length);
 			
+			//we will break the message into chunks and send it chunk by chunk
 			for (int i = 0; i < chunks.length; i++) {
 				payload.setData(ByteString.copyFrom(chunks[i]));
 				payload.setChunkId(i);
