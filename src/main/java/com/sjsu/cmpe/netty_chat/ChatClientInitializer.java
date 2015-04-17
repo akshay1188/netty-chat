@@ -20,10 +20,6 @@ public class ChatClientInitializer extends ChannelInitializer<SocketChannel> {
 	protected void initChannel(SocketChannel arg0) throws Exception {
 		ChannelPipeline pipeline = arg0.pipeline();
 		
-//		if (compress) {
-//			pipeline.addLast("deflater", ZlibCodecFactory.newZlibEncoder(ZlibWrapper.GZIP));
-//			pipeline.addLast("inflater", ZlibCodecFactory.newZlibDecoder(ZlibWrapper.GZIP));
-//		}
 
 		/**
 		 * length (4 bytes).
@@ -34,9 +30,6 @@ public class ChatClientInitializer extends ChannelInitializer<SocketChannel> {
 		 */
 		pipeline.addLast("frameDecoder", new LengthFieldBasedFrameDecoder(67108864, 0, 4, 0, 4));
 
-		// pipeline.addLast("frameDecoder", new
-		// DebugFrameDecoder(67108864, 0, 4, 0, 4));
-
 		// decoder must be first
 		pipeline.addLast("protobufDecoder", new ProtobufDecoder(com.sjsu.cmpe.netty_chat.Image.Request.getDefaultInstance()));
 		pipeline.addLast("frameEncoder", new LengthFieldPrepender(4));
@@ -44,13 +37,6 @@ public class ChatClientInitializer extends ChannelInitializer<SocketChannel> {
 
 		// our server processor (new instance for each connection)
 		pipeline.addLast("handler", new ChatClientHandler());
-		
-//		pipeline.addLast("framer",new DelimiterBasedFrameDecoder(8162, Delimiters.lineDelimiter()));
-//		pipeline.addLast("decoder",new StringDecoder());
-//		pipeline.addLast("encoder",new StringEncoder());
-//		
-//		pipeline.addLast("handler", new ChatClientHandler());
-
 	}
 
 }
