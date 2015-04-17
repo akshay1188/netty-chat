@@ -44,6 +44,7 @@ public class ChatClient implements Runnable {
 	private static int clusterId = 9;
 	private String caption;
 	private String path;
+	private final int CHUNK_SIZE = 10000;
 
 	public ChatClient(String host, int port) {
 		this.host = host;
@@ -82,7 +83,7 @@ public class ChatClient implements Runnable {
 			System.out.println(Arrays.toString(fileContent));
 			System.out.println("size " + fileContent.length);
 
-			byte[][] res = divideArray(fileContent, 10000);
+			byte[][] res = divideArray(fileContent, CHUNK_SIZE);
 			System.out.println("res size " + res.length);
 			sendChunks(res);
 			/*
