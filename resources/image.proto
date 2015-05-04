@@ -8,6 +8,8 @@ message Header {
          required int32 cluster_id = 3;
          required bool is_client = 4;
          required string caption = 5;	// image caption / title
+         optional int32 phase = 7; // tells which phase the image is in. 1.from client to server, 2. from server to leader, 3. split image sent from leader
+         						 // to servers. 4. grey scale image back to leader // 5. final merged image broadcast to servers, 6. server to client.
 }
 
 message PayLoad {

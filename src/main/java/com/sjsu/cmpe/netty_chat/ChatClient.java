@@ -28,6 +28,7 @@ public class ChatClient implements Runnable {
 	private final int port;
 	private static int clientId = 3;//the server id to which client is connected 
 	private static int clusterId = 4;//the cluster to which the client is connected
+	private static int phase =1;
 	private final int CHUNK = 2000000;//size of an individual chunk - 2MB
 
 	public ChatClient(String host, int port) {
@@ -42,7 +43,8 @@ public class ChatClient implements Runnable {
 		try {
 			//pick an image
 			File file = new File(
-					"/Users/akshay/Desktop/e68557dc-2725-420f-8315-6977ef23cdbe.png");
+					//"/Users/akshay/Desktop/e68557dc-2725-420f-8315-6977ef23cdbe.png");
+			 "Users/Krishna/Desktop/original.png");
 			
 			//convert the image into byte array
 			byte[] fileToBytesArray = Files.readAllBytes(file.toPath());
@@ -92,6 +94,7 @@ public class ChatClient implements Runnable {
 			Header.Builder header = Header.newBuilder();
 			header.setClientId(clientId);
 			header.setClusterId(clusterId);
+			header.setPhase(phase);
 			header.setIsClient(true);
 
 			PayLoad.Builder payload = PayLoad.newBuilder();

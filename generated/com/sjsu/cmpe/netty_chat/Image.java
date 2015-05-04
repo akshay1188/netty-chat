@@ -78,6 +78,23 @@ public final class Image {
      */
     com.google.protobuf.ByteString
         getCaptionBytes();
+
+    /**
+     * <code>optional int32 phase = 7;</code>
+     *
+     * <pre>
+     * tells which phase the image is in. 1.from client to server, 2. from server to leader, 3. split image sent from leader
+     * </pre>
+     */
+    boolean hasPhase();
+    /**
+     * <code>optional int32 phase = 7;</code>
+     *
+     * <pre>
+     * tells which phase the image is in. 1.from client to server, 2. from server to leader, 3. split image sent from leader
+     * </pre>
+     */
+    int getPhase();
   }
   /**
    * Protobuf type {@code Header}
@@ -156,6 +173,11 @@ public final class Image {
               com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000010;
               caption_ = bs;
+              break;
+            }
+            case 56: {
+              bitField0_ |= 0x00000020;
+              phase_ = input.readInt32();
               break;
             }
           }
@@ -339,12 +361,36 @@ public final class Image {
       }
     }
 
+    public static final int PHASE_FIELD_NUMBER = 7;
+    private int phase_;
+    /**
+     * <code>optional int32 phase = 7;</code>
+     *
+     * <pre>
+     * tells which phase the image is in. 1.from client to server, 2. from server to leader, 3. split image sent from leader
+     * </pre>
+     */
+    public boolean hasPhase() {
+      return ((bitField0_ & 0x00000020) == 0x00000020);
+    }
+    /**
+     * <code>optional int32 phase = 7;</code>
+     *
+     * <pre>
+     * tells which phase the image is in. 1.from client to server, 2. from server to leader, 3. split image sent from leader
+     * </pre>
+     */
+    public int getPhase() {
+      return phase_;
+    }
+
     private void initFields() {
       md5_ = "";
       clientId_ = 0;
       clusterId_ = 0;
       isClient_ = false;
       caption_ = "";
+      phase_ = 0;
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -390,6 +436,9 @@ public final class Image {
       if (((bitField0_ & 0x00000010) == 0x00000010)) {
         output.writeBytes(5, getCaptionBytes());
       }
+      if (((bitField0_ & 0x00000020) == 0x00000020)) {
+        output.writeInt32(7, phase_);
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -418,6 +467,10 @@ public final class Image {
       if (((bitField0_ & 0x00000010) == 0x00000010)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(5, getCaptionBytes());
+      }
+      if (((bitField0_ & 0x00000020) == 0x00000020)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(7, phase_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -546,6 +599,8 @@ public final class Image {
         bitField0_ = (bitField0_ & ~0x00000008);
         caption_ = "";
         bitField0_ = (bitField0_ & ~0x00000010);
+        phase_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000020);
         return this;
       }
 
@@ -594,6 +649,10 @@ public final class Image {
           to_bitField0_ |= 0x00000010;
         }
         result.caption_ = caption_;
+        if (((from_bitField0_ & 0x00000020) == 0x00000020)) {
+          to_bitField0_ |= 0x00000020;
+        }
+        result.phase_ = phase_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -628,6 +687,9 @@ public final class Image {
           bitField0_ |= 0x00000010;
           caption_ = other.caption_;
           onChanged();
+        }
+        if (other.hasPhase()) {
+          setPhase(other.getPhase());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -940,6 +1002,54 @@ public final class Image {
   }
   bitField0_ |= 0x00000010;
         caption_ = value;
+        onChanged();
+        return this;
+      }
+
+      private int phase_ ;
+      /**
+       * <code>optional int32 phase = 7;</code>
+       *
+       * <pre>
+       * tells which phase the image is in. 1.from client to server, 2. from server to leader, 3. split image sent from leader
+       * </pre>
+       */
+      public boolean hasPhase() {
+        return ((bitField0_ & 0x00000020) == 0x00000020);
+      }
+      /**
+       * <code>optional int32 phase = 7;</code>
+       *
+       * <pre>
+       * tells which phase the image is in. 1.from client to server, 2. from server to leader, 3. split image sent from leader
+       * </pre>
+       */
+      public int getPhase() {
+        return phase_;
+      }
+      /**
+       * <code>optional int32 phase = 7;</code>
+       *
+       * <pre>
+       * tells which phase the image is in. 1.from client to server, 2. from server to leader, 3. split image sent from leader
+       * </pre>
+       */
+      public Builder setPhase(int value) {
+        bitField0_ |= 0x00000020;
+        phase_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 phase = 7;</code>
+       *
+       * <pre>
+       * tells which phase the image is in. 1.from client to server, 2. from server to leader, 3. split image sent from leader
+       * </pre>
+       */
+      public Builder clearPhase() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        phase_ = 0;
         onChanged();
         return this;
       }
@@ -3093,15 +3203,15 @@ public final class Image {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\013image.proto\"`\n\006Header\022\013\n\003md5\030\001 \001(\t\022\021\n\t" +
+      "\n\013image.proto\"o\n\006Header\022\013\n\003md5\030\001 \001(\t\022\021\n\t" +
       "client_id\030\002 \002(\005\022\022\n\ncluster_id\030\003 \002(\005\022\021\n\ti" +
-      "s_client\030\004 \002(\010\022\017\n\007caption\030\005 \002(\t\"O\n\007PayLo" +
-      "ad\022\014\n\004data\030\001 \002(\014\022\016\n\006img_id\030\002 \001(\005\022\020\n\010chun" +
-      "k_id\030\003 \001(\005\022\024\n\014total_chunks\030\004 \001(\005\"\027\n\004Ping" +
-      "\022\017\n\007is_ping\030\001 \002(\010\"R\n\007Request\022\027\n\006header\030\001" +
-      " \002(\0132\007.Header\022\031\n\007payload\030\002 \002(\0132\010.PayLoad" +
-      "\022\023\n\004ping\030\003 \002(\0132\005.PingB\034\n\030com.sjsu.cmpe.n" +
-      "etty_chatH\001"
+      "s_client\030\004 \002(\010\022\017\n\007caption\030\005 \002(\t\022\r\n\005phase" +
+      "\030\007 \001(\005\"O\n\007PayLoad\022\014\n\004data\030\001 \002(\014\022\016\n\006img_i" +
+      "d\030\002 \001(\005\022\020\n\010chunk_id\030\003 \001(\005\022\024\n\014total_chunk" +
+      "s\030\004 \001(\005\"\027\n\004Ping\022\017\n\007is_ping\030\001 \002(\010\"R\n\007Requ" +
+      "est\022\027\n\006header\030\001 \002(\0132\007.Header\022\031\n\007payload\030" +
+      "\002 \002(\0132\010.PayLoad\022\023\n\004ping\030\003 \002(\0132\005.PingB\034\n\030" +
+      "com.sjsu.cmpe.netty_chatH\001"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -3120,7 +3230,7 @@ public final class Image {
     internal_static_Header_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Header_descriptor,
-        new java.lang.String[] { "Md5", "ClientId", "ClusterId", "IsClient", "Caption", });
+        new java.lang.String[] { "Md5", "ClientId", "ClusterId", "IsClient", "Caption", "Phase", });
     internal_static_PayLoad_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_PayLoad_fieldAccessorTable = new
